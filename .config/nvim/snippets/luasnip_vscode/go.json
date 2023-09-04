@@ -1,0 +1,55 @@
+{
+  "in": {
+    "prefix": "in",
+    "description": "Init",
+    "body": [
+      "package $1",
+      "",
+      "import (",
+      "\t\"fmt\"$2",
+      ")",
+      "",
+      "func main() {",
+      "\t$0",
+      "}"
+    ]
+  },
+  "pr": {
+    "prefix": "pr",
+    "description": "print",
+    "body": "fmt.Println($0)"
+  },
+  "pf": {
+    "prefix": "pf",
+    "description": "print",
+    "body": "fmt.Printf(\"$1\\n\", $0)"
+  },
+  "fi": {
+    "prefix": "fi",
+    "description": "for",
+    "body": ["for ${1:_}, ${2:v} := range $3 {", "\t$0", "}"]
+  },
+  "fo": {
+    "prefix": "fo",
+    "description": "for",
+    "body": ["for i := 0; i < $1; i++ {", "\t$0", "}"]
+  },
+  "ts": {
+    "prefix": "ts",
+    "description": "struct",
+    "body": ["type $1 struct {", "\t$0", "}"]
+  },
+  "ti": {
+    "prefix": "ti",
+    "description": "interface",
+    "body": ["type $1 interface {", "\t$0", "}"]
+  },
+  "fn": {
+    "prefix": "fn",
+    "body": ["func ${1:fname}($2) $3 {", "\t$0", "}"]
+  },
+  "cfn": {
+    "prefix": "cfn",
+    "body": ["func ($1) ${2:fname}($3) $4 {", "\t$0", "}"]
+  }
+}

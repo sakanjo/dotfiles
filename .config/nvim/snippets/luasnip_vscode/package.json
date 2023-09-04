@@ -1,0 +1,149 @@
+{
+  "contributes": {
+    "snippets": [
+      {
+        "language": [
+          "xml"
+        ],
+        "path": "./xml.json"
+      },
+      {
+        "language": [
+          "service"
+        ],
+        "path": "./service.json"
+      },
+      {
+        "language": [
+          "c"
+        ],
+        "path": "./c.json"
+      },
+      {
+        "language": [
+          "cs"
+        ],
+        "path": "./cs.json"
+      },
+      {
+        "language": [
+          "cpp"
+        ],
+        "path": "./cpp.json"
+      },
+      {
+        "language": [
+          "python"
+        ],
+        "path": "./python.json"
+      },
+      {
+        "language": [
+          "json"
+        ],
+        "path": "./json.json"
+      },
+      {
+        "language": [
+          "cmake"
+        ],
+        "path": "./cmake.json"
+      },
+      {
+        "language": [
+          "sh"
+        ],
+        "path": "./sh.json"
+      },
+      {
+        "language": [
+          "all"
+        ],
+        "path": "./all.json"
+      },
+      {
+        "language": [
+          "javascript",
+          "typescript",
+          "typescriptreact",
+          "vue"
+        ],
+        "path": "./javascript.json"
+      },
+      {
+        "language": [
+          "desktop"
+        ],
+        "path": "./desktop.json"
+      },
+      {
+        "language": [
+          "typescript",
+          "typescriptreact",
+          "vue"
+        ],
+        "path": "./typescript.json"
+      },
+      {
+        "language": [
+          "typescriptreact"
+        ],
+        "path": "./typescriptreact.json"
+      },
+      {
+        "language": [
+          "html"
+        ],
+        "path": "./html.json"
+      },
+      {
+        "language": [
+          "php"
+        ],
+        "path": "./php.json"
+      },
+      {
+        "language": [
+          "java"
+        ],
+        "path": "./java.json"
+      },
+      {
+        "language": [
+          "go"
+        ],
+        "path": "./go.json"
+      },
+      {
+        "language": [
+          "ruby"
+        ],
+        "path": "./ruby.json"
+      },
+      {
+        "language": [
+          "vue"
+        ],
+        "path": "./vue.json"
+      },
+      {
+        "language": [
+          "lua"
+        ],
+        "path": "./lua.json"
+      },
+      {
+        "language": [
+          "rust"
+        ],
+        "path": "./rust.json"
+      },
+      {
+        "language": [
+          "asm"
+        ],
+        "path": "./asm.json"
+      }
+    ]
+  }
+}

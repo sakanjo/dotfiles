@@ -1,0 +1,32 @@
+{
+  "pr": {
+    "prefix": "pr",
+    "description": "println",
+    "body": "System.out.println($0);"
+  },
+  "pf": {
+    "prefix": "pf",
+    "description": "printf",
+    "body": "System.out.printf(\"$1\\n\", $0);"
+  },
+  "pc": {
+    "prefix": "pc",
+    "body": ["protected ${1:void} ${2:fname}($3) {", "\t$0", "}"]
+  },
+  "pv": {
+    "prefix": "pv",
+    "body": ["private ${1:void} ${2:fname}($3) {", "\t$0", "}"]
+  },
+  "met": {
+    "prefix": "met",
+    "body": ["public ${1:void} ${2:fname}($3) {", "\t$0", "}"]
+  },
+  "fu": {
+    "prefix": "fu",
+    "body": ["${1:void} ${2:fname}($3) {", "\t$0", "}"]
+  },
+  "fo": {
+    "prefix": "fo",
+    "body": ["for (int ${1:i} = ${2:0}; $1 < ${3:0}; $1++){", "\t$0", "}"]
+  }
+}

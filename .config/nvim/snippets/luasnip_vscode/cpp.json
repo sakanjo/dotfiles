@@ -1,0 +1,63 @@
+{
+  "in": {
+    "prefix": "in",
+    "description": "init",
+    "body": [
+      "#include <iostream>",
+      "",
+      "int main(int argc, char *argv[]) {",
+      "\t$0",
+      "\treturn 0;",
+      "}"
+    ]
+  },
+  "fv": {
+    "prefix": "fv",
+    "description": "general vector for loop (for)",
+    "body": [
+      "for (auto ${1:i} = ${2:v}.begin(); ${1:i} != $2.end(); ++$1) {",
+      "\t$0",
+      "}"
+    ]
+  },
+  "fo": {
+    "prefix": "fo",
+    "description": "general for loop (for)",
+    "body": ["for (int ${1:i} = 0; $1 < ${2:size}; $1++) {", "\t$0", "}"]
+  },
+  "fi": {
+    "prefix": "fi",
+    "description": "general for in",
+    "body": ["for (const auto &${1:i} : $2) {", "\t$0", "}"]
+  },
+  "be": {
+    "prefix": "be",
+    "description": "$1.begin(), $1.end() (beginend)",
+    "body": "${1:v}.begin(), $1.end()"
+  },
+  "co": {
+    "prefix": "co",
+    "description": "cout",
+    "body": "std::cout << $0 << std::endl;"
+  },
+  "te": {
+    "prefix": "te",
+    "description": "template",
+    "body": ["template <typename T>", "$0"]
+  },
+  "ifd": {
+    "prefix": "ifd",
+    "description": "#ifdef ...",
+    "body": ["#ifdef $1", "\t$0", "#endif"]
+  },
+  "ifnd": {
+    "prefix": "ifnd",
+    "description": "#ifndef ...",
+    "body": ["#ifndef $1", "\t$0", "#endif"]
+  },
+  "cl": {
+    "prefix": "cl",
+    "description": "Class",
+    "body": ["class $1 {", "\t$0", "};"]
+  }
+}

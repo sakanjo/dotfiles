@@ -1,0 +1,210 @@
+{
+  "pr": {
+    "prefix": "pr",
+    "description": "print",
+    "body": "print($0)"
+  },
+  "pf": {
+    "prefix": "pf",
+    "body": "print(f\"$0\")"
+  },
+  "#!": {
+    "prefix": "#!",
+    "body": "#!/usr/bin/env python3"
+  },
+  "ifm": {
+    "prefix": "ifm",
+    "description": "if main",
+    "body": [
+      "$0",
+      "",
+      "if __name__ == '__main__':",
+      "\traise SystemExit(main())"
+    ]
+  },
+  "in": {
+    "prefix": "in",
+    "description": "Init",
+    "body": [
+      "$1",
+      "",
+      "def main() -> int:",
+      "\t$0",
+      "\treturn 0",
+      "",
+      "if __name__ == '__main__':",
+      "\traise SystemExit(main())"
+    ]
+  },
+  "de": {
+    "prefix": "de",
+    "description": "def fn",
+    "body": [
+      "def ${1:fname}(self$2) -> ${3:None}:",
+      "\t${4:pass}",
+      "",
+      "${0:pass}"
+    ]
+  },
+  "def": {
+    "prefix": "def",
+    "description": "def fn",
+    "body": [
+      "def ${1:fname}($2) -> ${3:None}:",
+      "\t${4:pass}"
+    ]
+  },
+  "asde": {
+    "prefix": "asde",
+    "body": [
+      "async def ${1:fname}($2) -> ${3:None}:",
+      "\t${4:pass}"
+    ]
+  },
+  "cm": {
+    "prefix": "cm",
+    "body": [
+      "@classmethod",
+      "def ${1:fname}(cls$2) -> ${3:None}:",
+      "\t${4:pass}",
+      "",
+      "${0:pass}"
+    ]
+  },
+  "sm": {
+    "prefix": "sm",
+    "body": [
+      "@staticmethod",
+      "def ${1:fname}($2) -> ${3:None}:",
+      "\t${4:pass}",
+      "",
+      "${0:pass}"
+    ]
+  },
+  "asd": {
+    "prefix": "asd",
+    "body": [
+      "async def ${1:fname}(self$2) -> ${3:None}:",
+      "\t${4:pass}",
+      "",
+      "${0:pass}"
+    ]
+  },
+  "fi": {
+    "prefix": "fi",
+    "description": "For loop",
+    "body": [
+      "for i in $1:",
+      "\t${0:pass}"
+    ]
+  },
+  "fo": {
+    "prefix": "fo",
+    "description": "For loop",
+    "body": [
+      "for ${2:i} in $1:",
+      "\t${0:pass}"
+    ]
+  },
+  "ct": {
+    "prefix": "ct",
+    "description": "CTX",
+    "body": [
+      "def __enter__(self):",
+      "\t${1:pass}",
+      "",
+      "def __exit__(self, exc_type, exc_value, traceback) -> None:",
+      "\t${2:pass}",
+      "",
+      "${0:pass}"
+    ]
+  },
+  "re": {
+    "prefix": "re",
+    "description": "methods implementing string representation",
+    "body": [
+      "def __repr__(self) -> str:",
+      "\treturn f\"$1\"",
+      "",
+      "def __str__(self) -> str:",
+      "\treturn self.__repr__()",
+      "",
+      "${0:pass}"
+    ]
+  },
+  "at": {
+    "prefix": "at",
+    "description": "methods for customizing attribute access",
+    "body": [
+      "def __getattr__(self, name) -> None:",
+      "\t${1:pass}",
+      "",
+      "def __setattr__(self, name, value) -> None:",
+      "\t${2:pass}",
+      "",
+      "def __delattr__(self, name) -> None:",
+      "\t${3:pass}",
+      "",
+      "${0:pass}"
+    ]
+  },
+  "cmp": {
+    "prefix": "cmp",
+    "description": "methods implementing rich comparison",
+    "body": [
+      "def __eq__(self, other: ${1:...}):",
+      "\t${2:pass}",
+      "",
+      "def __ne__(self, other: $1):",
+      "\t${3:pass}",
+      "",
+      "def __lt__(self, other: $1):",
+      "\t${4:pass}",
+      "",
+      "def __le__(self, other: $1):",
+      "\t${5:pass}",
+      "",
+      "def __gt__(self, other: $1):",
+      "\t${6:pass}",
+      "",
+      "def __ge__(self, other: $1):",
+      "\t${7:pass}",
+      "",
+      "def __cmp__(self, other: $1):",
+      "\t${8:pass}",
+      "",
+      "${0:pass}"
+    ]
+  },
+  "nu": {
+    "prefix": "nu",
+    "description": "methods for emulating a numeric type",
+    "body": [
+      "def __add__(self, other: ${1:...}):",
+      "\t${2:pass}",
+      "",
+      "def __sub__(self, other: $1):",
+      "\t${3:pass}",
+      "",
+      "def __mul__(self, other: $1):",
+      "\t${4:pass}",
+      "",
+      "def __div__(self, other: $1):",
+      "\t${5:pass}",
+      "",
+      "def __truediv__(self, other: $1):",
+      "\t${6:pass}",
+      "",
+      "def __floordiv__(self, other: $1):",
+      "\t${7:pass}",
+      "",
+      "def __mod__(self, other: $1):",
+      "\t${8:pass}",
+      "",
+      "def __divmod__(self, other: $1):",
+      "\t${9:pass}",
+      "",
+      "${0:pass}"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "cw": {
+    "prefix": "cw",
+    "description": "Console.WriteLine",
+    "body": ["Console.WriteLine($0);"]
+  },
+  "pr": {
+    "prefix": "pr",
+    "description": "Property",
+    "body": ["public $1 $0 { get; set; }"]
+  },
+  "met": {
+    "prefix": "met",
+    "description": "Method",
+    "body": ["public $1 $2() {", "\t$0", "}"]
+  }
+}

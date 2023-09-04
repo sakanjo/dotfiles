@@ -1,0 +1,16 @@
+{
+  "caf": {
+    "prefix": "caf",
+    "body": [
+      "const ${1:func} = ($2): ${3:void} => {",
+      "\t$0",
+      "}"
+    ]
+  },
+  "af": {
+    "prefix": "af",
+    "body": [
+      "($1): ${2:void} => ${0:undefined}"
+    ]
+  }
+}

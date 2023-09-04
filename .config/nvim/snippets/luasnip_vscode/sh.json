@@ -1,0 +1,40 @@
+{
+  "in": {
+    "prefix": "in",
+    "body": ["#!/usr/bin/env sh", "", "", ""]
+  },
+  "#!": {
+    "prefix": "#!",
+    "body": "#!/usr/bin/env sh"
+  },
+  "if": {
+    "prefix": "if",
+    "description": "if statement",
+    "body": ["if [ $1 ]; then", "\t$0", "fi"]
+  },
+  "elif": {
+    "prefix": "elif",
+    "description": "elif statement",
+    "body": ["elif [ $1 ]; then", "\t$0"]
+  },
+  "fo": {
+    "prefix": "fo",
+    "description": "for statement",
+    "body": ["for $1 in $2; do", "\t$0", "done"]
+  },
+  "wh": {
+    "prefix": "wh",
+    "description": "while statement",
+    "body": ["while [ $1 ]; do", "\t$0", "done"]
+  },
+  "un": {
+    "prefix": "un",
+    "description": "until statement",
+    "body": ["until [ $1 ]; do", "\t$0", "done"]
+  },
+  "fu": {
+    "prefix": "fu",
+    "description": "function statement",
+    "body": ["function $1() {", "\t$0", "}"]
+  }
+}

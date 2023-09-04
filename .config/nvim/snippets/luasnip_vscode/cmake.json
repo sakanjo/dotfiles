@@ -1,0 +1,17 @@
+{
+  "in": {
+    "prefix": "init",
+    "description": "Default",
+    "body": [
+      "cmake_minimum_required(VERSION 3.13)  # CMake version check",
+      "project(${1:main})               # Create project \"$1\"",
+      "set(CMAKE_CXX_STANDARD 14)            # Enable c++14 standard",
+      "",
+      "# Add $1.cpp file of project root directory as source file",
+      "set(SOURCE_FILES ${2:main}.cpp)",
+      "",
+      "# Add executable target with source files listed in SOURCE_FILES variable",
+      "add_executable($1 \\${SOURCE_FILES})"
+    ]
+  }
+}

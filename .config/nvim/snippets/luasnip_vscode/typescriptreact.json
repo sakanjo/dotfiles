@@ -1,0 +1,14 @@
+{
+  "in": {
+    "prefix": "in",
+    "description": "init",
+    "body": [
+      "import React from \"react\"",
+      "",
+      "export default function ${CUR_BASENAME}() {",
+      "\t$0",
+      "\treturn <div>Hello ${CUR_BASENAME}</div>",
+      "}"
+    ]
+  }
+}

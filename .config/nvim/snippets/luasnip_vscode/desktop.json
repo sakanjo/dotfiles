@@ -1,0 +1,15 @@
+{
+  "en": {
+    "prefix": "en",
+    "description": "Desktop entry",
+    "body": [
+      "[Desktop Entry]",
+      "Name=$1",
+      "GenericName=$1",
+      "Comment=$2",
+      "Exec=$3",
+      "Icon=$4",
+      "Type=Application"
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "in": {
+    "prefix": "in",
+    "description": "Init",
+    "body": [
+      "$1",
+      "",
+      "def main",
+      "\t$0",
+      "\t0",
+      "end",
+      "",
+      "__FILE__ == \\$PROGRAM_NAME and exit(main)"
+    ]
+  }
+}

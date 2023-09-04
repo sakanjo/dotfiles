@@ -4,6 +4,7 @@
 
 ## Contents
 
+- nvim config
 - kitty config
 - tmux config
 - git config

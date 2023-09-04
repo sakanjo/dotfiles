@@ -1,0 +1,84 @@
+{
+  "in": {
+    "prefix": "in",
+    "description": "init",
+    "body": [
+      "#include <stdio.h>",
+      "",
+      "int main(int argc, char *argv[]) {",
+      "\t$0",
+      "\treturn 0;",
+      "}"
+    ]
+  },
+  "fo": {
+    "prefix": "fo",
+    "description": "For loop",
+    "body": ["for (size_t ${1:i} = 0;$1 < ${2:count}; $1++) {", "\t$0", "\\}"]
+  },
+  "pr": {
+    "prefix": "pr",
+    "description": "Print",
+    "body": "printf(\"$1\\n\", $0);"
+  },
+  "po": {
+    "prefix": "po",
+    "description": "Print",
+    "body": "printf(\"$0\\n\");"
+  },
+  "ps": {
+    "prefix": "ps",
+    "description": "Print",
+    "body": "printf(\"%s\\n\", $0);"
+  },
+  "pc": {
+    "prefix": "pc",
+    "description": "Print",
+    "body": "printf(\"%c\\n\", $0);"
+  },
+  "pd": {
+    "prefix": "pd",
+    "description": "Print",
+    "body": "printf(\"%d\\n\", $0);"
+  },
+  "pp": {
+    "prefix": "pp",
+    "description": "Print",
+    "body": "printf(\"%p\\n\", $0);"
+  },
+  "pld": {
+    "prefix": "pld",
+    "description": "Print",
+    "body": "printf(\"%ld\\n\", $0);"
+  },
+  "pzu": {
+    "prefix": "pzu",
+    "description": "Print",
+    "body": "printf(\"%zu\\n\", $0);"
+  },
+  "sd": {
+    "prefix": "sd",
+    "description": "Scan",
+    "body": "scanf(\"%d\", &$0);"
+  },
+  "ss": {
+    "prefix": "ss",
+    "description": "Scan",
+    "body": "scanf(\"%s\", &$0);"
+  },
+  "sc": {
+    "prefix": "sc",
+    "description": "Scan",
+    "body": "scanf(\"%c\", &$0);"
+  },
+  "ifd": {
+    "prefix": "ifd",
+    "description": "#ifdef ...",
+    "body": ["#ifdef $1", "$0", "#endif"]
+  },
+  "st": {
+    "prefix": "st",
+    "description": "struct ...",
+    "body": ["typedef struct $1 {", "\t$0", "} $1;"]
+  }
+}

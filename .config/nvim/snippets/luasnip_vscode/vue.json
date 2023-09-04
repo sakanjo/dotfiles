@@ -1,0 +1,39 @@
+{
+  "in": {
+    "prefix": "in",
+    "description": "init",
+    "body": [
+      "<script setup lang=\"ts\">",
+      "$0",
+      "</script>",
+      "",
+      "<template>",
+      "\t$1",
+      "</template>"
+    ]
+  },
+  "sc": {
+    "prefix": "sc",
+    "body": [
+      "<script setup lang=\"ts\">",
+      "$0",
+      "</script>"
+    ]
+  },
+  "dp": {
+    "prefix": "dp",
+    "body": [
+      "const props = defineProps<{",
+      "\t$0",
+      "}>()"
+    ]
+  },
+  "adp": {
+    "prefix": "adp",
+    "body": [
+      "defineProps<{",
+      "\t$0",
+      "}>()"
+    ]
+  }
+}

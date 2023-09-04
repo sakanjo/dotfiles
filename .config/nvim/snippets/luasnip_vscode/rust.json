@@ -1,0 +1,46 @@
+{
+  "pr": {
+    "prefix": "pr",
+    "body": ["println!(\"$0\");"]
+  },
+  "pf": {
+    "prefix": "pf",
+    "body": ["println!(\"$1\", $0);"]
+  },
+  "fn": {
+    "prefix": "fn",
+    "body": ["fn ${1:fname}($2) -> ${3:()} {", "\t$0", "}"]
+  },
+  "pfn": {
+    "prefix": "pfn",
+    "body": ["pub fn ${1:fname}($2) -> ${3:()} {", "\t$0", "}"]
+  },
+  "afn": {
+    "prefix": "afn",
+    "body": ["async fn ${1:fname}($2) -> ${3:()} {", "\t$0", "}"]
+  },
+  "pafn": {
+    "prefix": "pafn",
+    "body": ["pub async fn ${1:fname}($2) -> ${3:()} {", "\t$0", "}"]
+  },
+  "st": {
+    "prefix": "st",
+    "body": ["struct ${1:sname} {", "\t$0", "}"]
+  },
+  "sti": {
+    "prefix": "sti",
+    "body": ["struct ${1:sname} {", "\t$2", "}", "", "impl $1 {", "\t$0", "}"]
+  },
+  "im": {
+    "prefix": "im",
+    "body": ["impl ${1:iname} {", "\t$0", "}"]
+  },
+  "fi": {
+    "prefix": "fi",
+    "body": ["for ${1:i} in ${2:[]} {", "\t$0", "}"]
+  },
+  "pm": {
+    "prefix": "pm",
+    "body": ["pub mod ${1:mname} {", "\t$0", "}"]
+  }
+}

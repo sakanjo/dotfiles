@@ -1,0 +1,17 @@
+{
+  "lg": {
+    "prefix": "lg",
+    "description": "log msg",
+    "body": "console.log($0)"
+  },
+  "re": {
+    "prefix": "re",
+    "description": "Require",
+    "body": "const $0 = require('$1')"
+  },
+  "im": {
+    "prefix": "im",
+    "description": "Import",
+    "body": "import { $0 } from '$1'"
+  }
+}

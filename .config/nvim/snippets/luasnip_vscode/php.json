@@ -1,0 +1,88 @@
+{
+  "in": {
+    "prefix": "in",
+    "description": "init",
+    "body": ["<?php", "", "", ""]
+  },
+  "pfr": {
+    "prefix": "pfr",
+    "description": "Public function request",
+    "body": ["public function ${1:fname}(Request \\$req): void {", "\t$0", "}"]
+  },
+  "met": {
+    "prefix": "met",
+    "body": ["public function ${1:fname}($2): ${3:void} {", "\t$0", "}"]
+  },
+  "pc": {
+    "prefix": "pc",
+    "body": ["protected function ${1:fname}($2): ${3:void} {", "\t$0", "}"]
+  },
+  "pv": {
+    "prefix": "pv",
+    "body": ["private function ${1:fname}($2): ${3:void} {", "\t$0", "}"]
+  },
+  "smet": {
+    "prefix": "smet",
+    "body": ["public static function ${1:fname}($2): ${3:void} {", "\t$0", "}"]
+  },
+  "spc": {
+    "prefix": "spc",
+    "body": ["protected static function ${1:fname}($2): ${3:void} {", "\t$0", "}"]
+  },
+  "spv": {
+    "prefix": "spv",
+    "body": ["private static function ${1:fname}($2): ${3:void} {", "\t$0", "}"]
+  },
+  "fu": {
+    "prefix": "fu",
+    "body": ["function ${1:fname}($2): ${3:void} {", "\t$0", "}"]
+  },
+  "rc": {
+    "prefix": "rc",
+    "body": [
+      "Route::controller(\\App\\Http\\Controllers\\\\$1::class)->group(function () {",
+      "\t$0",
+      "});"
+    ]
+  },
+  "rcm": {
+    "prefix": "rcm",
+    "body": [
+      "Route::controller(\\App\\Http\\Controllers\\\\$1::class)->middleware($2)->group(function () {",
+      "\t$0",
+      "});"
+    ]
+  },
+  "rm": {
+    "prefix": "rm",
+    "body": ["Route::middleware($1)->group(function () {", "\t$0", "});"]
+  },
+  "rg": {
+    "prefix": "rg",
+    "body": ["Route::get('/$1', '$0');"]
+  },
+  "rp": {
+    "prefix": "rp",
+    "body": ["Route::post('/$1', '$0');"]
+  },
+  "rd": {
+    "prefix": "rd",
+    "body": ["Route::delete('/$1', '$0');"]
+  },
+  "rpu": {
+    "prefix": "rpu",
+    "body": ["Route::put('/$1', '$0');"]
+  },
+  "ri": {
+    "prefix": "ri",
+    "body": ["Route::inertia('/$1', '$0');"]
+  },
+  "dd": {
+    "prefix": "dd",
+    "body": ["dd($0);"]
+  },
+  "fn": {
+    "prefix": "fn",
+    "body": ["fn($1) => $0"]
+  }
+}

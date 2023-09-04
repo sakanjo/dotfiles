@@ -1,0 +1,55 @@
+{
+  "tsc": {
+    "prefix": "tsc",
+    "description": "tsconfig",
+    "body": [
+      "{",
+      "\t\"compilerOptions\": {",
+      "\t\t\"module\": \"commonjs\",",
+      "\t\t\"target\": \"ES5\",",
+      "\t\t\"lib\": [\"DOM\", \"ES5\"],",
+      "\t\t\"allowSyntheticDefaultImports\": true,",
+      "\t\t\"allowJs\": true,",
+      "\t\t\"checkJs\": false,",
+      "\t\t\"baseUrl\": \".\",",
+      "\t\t\"moduleResolution\": \"node\",",
+      "\t\t\"paths\": {",
+      "\t\t\t\"@/*\": [\"src/*\"],",
+      "\t\t\t\"@c/*\": [\"src/components/*\"]",
+      "\t\t},",
+      "\t},",
+      "\t\"exclude\": [\"node_modules\"],",
+      "\t\"include\": [\"**/*.{ts,js,tsx,jsx}\"]",
+      "}"
+    ],
+  },
+  "jsc": {
+    "prefix": "jsc",
+    "description": "jsconfig",
+    "body": [
+      "{",
+      "\t\"compilerOptions\": {",
+      "\t\t\"baseUrl\": \".\",",
+      "\t\t\"paths\": {",
+      "\t\t\t\"@/*\": [\"src/*\"],",
+      "\t\t\t\"@c/*\": [\"src/components/*\"]",
+      "\t\t},",
+      "\t\t\"allowSynthenticDefaultImports\": ${1:true},",
+      "\t\t\"allowJs\": true",
+      "\t}",
+      "}"
+    ],
+  },
+  "pre": {
+    "prefix": "pre",
+    "description": "prettier",
+    "body": [
+      "{",
+      "\t\"semi\": false,",
+      "\t\"trailingComma\": \"none\",",
+      "\t\"arrowParens\": \"avoid\",",
+      "\t\"singleQuote\": true,",
+      "\t\"jsxSingleQuote\": true",
+      "}"
+    ],
+}
