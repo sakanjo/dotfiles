@@ -1,0 +1,134 @@
+let mapleader = "z"
+
+set ignorecase
+set smartcase
+set visualbell
+set noerrorbells
+set gdefault
+set incsearch
+set scrolloff=6
+set sidescrolloff=6
+set scrolljump=6
+set timeoutlen=5000
+set clipboard+=unnamed
+
+" Plugins
+set ideastrictmode
+set surround
+set ideajoin
+set multiple-cursors
+set NERDTree
+set which-key
+set ReplaceWithRegister
+set argtextobj
+set exchange
+set textobj-entire
+set highlightedyan
+set vim-paragraph-motion
+set textobj-indent
+set matchit
+set quickscope
+
+nmap <c-x> <Action>(CloseContent)
+nmap <c-b> :NERDTree<CR>
+
+nmap ge <Action>(GotoNextError)
+nmap gE <Action>(GotoPreviousError)
+
+nmap <cr> o<esc>O
+nmap <a-c> \"_ciw
+
+nmap <c-j> <Action>(PreviousTab)
+nmap <c-k> <Action>(NextTab)
+
+nmap <c-h> <Action>(MethodUp)
+nmap <c-l> <Action>(MethodDown)
+
+map <a-k> <Action>(MoveLineUp)
+map <a-j> <Action>(MoveLineDown)
+
+nmap <c-a-h> <Action>(MoveStatementUp)
+nmap <c-a-l> <Action>(MoveStatementDown)
+
+nmap <a-h> <Action>(VcsShowPrevChangeMarker)
+nmap <a-l> <Action>(VcsShowNextChangeMarker)
+
+nmap <leader>rh <Action>(Vcs.RollbackChangedLines)
+nmap <leader>rb <Action>(ChangesView.Revert)
+nmap <leader>ph <Action>(VcsShowCurrentChangeMarker)
+nmap <leader>fs <Action>(FileStructurePopup)
+nmap <leader>ch <Action>(CallHierarchy)
+
+nmap U <Action>($Redo)
+nmap Q <Action>(CloseProject)
+
+nmap <c-w>- <Action>(SplitHorizontally)
+nmap <c-w>\| <Action>(SplitVertically)
+nmap <c-w>z <Action>(MaximizeEditorInSplit)
+
+nmap <c-w><c-k> <Action>(StretchSplitToTop)
+nmap <c-w><c-j> <Action>(StretchSplitToBottom)
+nmap <c-w><c-h> <Action>(StretchSplitToLeft)
+nmap <c-w><c-l> <Action>(StretchSplitToRight)
+nmap <leader>zc <Action>(CollapseAllRegions)
+nmap <leader>zo <Action>(ExpandAllRegions)
+
+nmap <c-\> <Action>(NextSplitter)
+nmap <c-s-\> <Action>(PrevSplitter)
+nmap <c-=> <Action>(UnsplitAll)
+
+map <leader><a-n> <Action>(SelectAllOccurrences)
+map <c-c> <esc>
+
+map <leader>cr <Action>(Refactorings.QuickListPopupAction)
+map <leader>= <Action>(ReformatCode)
+map <leader>o <Action>(OptimizeImports)
+
+map <leader>rf <Action>(RecentFiles)
+map <leader>rl <Action>(RecentLocations)
+map <leader>sh <Action>(LocalHistory.ShowHistory)
+
+vnoremap < <gv
+vnoremap > >gv
+
+nmap <leader>gc <Action>(GotoClass)
+
+nmap <leader>tp <Action>(PinActiveTab)
+nmap <leader>rn <Action>(RenameElement)
+nmap <leader>ca <Action>(ShowIntentionActions)
+nmap <leader>tz <Action>(ToggleZenMode)
+nmap <leader>fu <Action>(FindUsages)
+
+nmap gi <Action>(GotoImplementation)
+nmap gd <Action>(GotoDeclaration)
+nmap gsm <Action>(GotoSuperMethod)
+nmap gt <Action>(GotoTest)
+nmap gb <Action>(Back)
+nmap gf <Action>(Forward)
+
+nmap <leader>gn <Action>(Generate)
+
+nmap <leader>so :so ~/.ideavimrc<CR>
+nmap <leader>e :e ~/.ideavimrc<CR>
+
+map <leader>sw <Action>(SurroundWith)
+map <leader>em <Action>(ExtractMethod)
+
+nmap <leader>vp <Action>(Vcs.QuickListPopupAction)
+nmap <leader>vh <Action>(Vcs.ShowTabbedFileHistory)
+
+nmap <leader>im <Action>(ImplementMethods)
+nmap <leader>om <Action>(OverrideMethods)
+nmap <leader>nc <Action>(NewClass)
+
+nmap <leader>fr <Action>(RenameFile)
+nmap gp `[v`]
+
+nmap <c-m-j> i<esc>"ryy"rp`^j
+nmap <c-m-k> i<esc>"ryy"rp`^
+
+vmap <c-m-j> <Action>(EditorDuplicateLines)
+vmap <c-m-k> "ry`>"rpgv
+
+map L $
+map H ^
