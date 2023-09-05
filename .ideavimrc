@@ -1,4 +1,4 @@
-let mapleader = "z"
+let mapleader = "\\"
 
 set ignorecase
 set smartcase
@@ -127,8 +127,10 @@ nmap gp `[v`]
 nmap <c-m-j> i<esc>"ryy"rp`^j
 nmap <c-m-k> i<esc>"ryy"rp`^
 
+nmap <c-a> gg
+
 vmap <c-m-j> <Action>(EditorDuplicateLines)
-vmap <c-m-k> "ry`>"rpgv
+vmap <c-m-k> "ry`>"rp
 
 map L $
 map H ^
