@@ -3,7 +3,6 @@ let mapleader = "\\"
 set ignorecase
 set smartcase
 set visualbell
-set noerrorbells
 set gdefault
 set incsearch
 set scrolloff=6
@@ -11,7 +10,6 @@ set sidescrolloff=6
 set scrolljump=6
 set timeoutlen=5000
 set clipboard+=unnamed
-set clipboard+=unnamedplus
 
 " Plugins
 set ideastrictmode
@@ -24,11 +22,11 @@ set ReplaceWithRegister
 set argtextobj
 set exchange
 set textobj-entire
-set highlightedyan
+set highlightedyank
 set vim-paragraph-motion
 set textobj-indent
 set matchit
-set quickscope
+" set quickscope
 
 nmap <c-x> <Action>(CloseContent)
 nmap <c-b> :NERDTree<CR>
@@ -131,6 +129,10 @@ nmap <c-s-k> i<esc>"ryy"rp`^
 vmap <c-s-j> <Action>(EditorDuplicateLines)
 vmap <c-s-k> "ry`>"rpgv
 
+nmap <a-d> "_dd
+xmap <a-d> "_dd
+vmap <a-d> "_d
+
 nmap <c-a> gg
 nmap <c-p> <Action>(GotoFile)
 imap <c-l> <Action>(copilot.applyInlays)
@@ -145,7 +147,10 @@ nmap <leader>, HvL
 nmap <c-a-k> :tabm+1<CR>
 nmap <c-a-j> :tabm-1<CR>
 
+nmap <leader>gc <Action>(CheckinProject)
+
 map <a-w> ysiw)i
+vmap <a-y> <Action>($Copy)<esc>
 
 map L $
 map H ^
