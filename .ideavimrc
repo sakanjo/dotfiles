@@ -148,7 +148,7 @@ nmap <leader>, HvL
 nmap <c-a-k> :tabm+1<CR>
 nmap <c-a-j> :tabm-1<CR>
 
-nmap <leader>gc <Action>(CheckinProject)
+nmap <leader>pc <Action>(CheckinProject)
 
 map <a-w> ysiw)i
 vmap <a-y> <Action>($Copy)<esc>
