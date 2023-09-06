@@ -109,7 +109,7 @@ nmap gf <Action>(Forward)
 nmap <leader>gn <Action>(Generate)
 
 nmap <leader>so :so ~/.ideavimrc<CR>
-nmap <leader>e :e ~/.ideavimrc<CR>
+nmap <leader>se :e ~/.ideavimrc<CR>
 
 map <leader>sw <Action>(SurroundWith)
 map <leader>em <Action>(ExtractMethod)
@@ -128,6 +128,8 @@ nmap <c-m-j> i<esc>"ryy"rp`^j
 nmap <c-m-k> i<esc>"ryy"rp`^
 
 nmap <c-a> gg
+nmap <c-p> <Action>(GotoFile)
+imap <c-l> <Action>(copilot.applyInlays)
 
 vmap <c-m-j> <Action>(EditorDuplicateLines)
 vmap <c-m-k> "ry`>"rp
