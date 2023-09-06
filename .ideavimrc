@@ -11,6 +11,7 @@ set sidescrolloff=6
 set scrolljump=6
 set timeoutlen=5000
 set clipboard+=unnamed
+set clipboard+=unnamedplus
 
 " Plugins
 set ideastrictmode
@@ -35,7 +36,7 @@ nmap <c-b> :NERDTree<CR>
 nmap ge <Action>(GotoNextError)
 nmap gE <Action>(GotoPreviousError)
 
-nmap <cr> o<esc>O
+nmap <CR> o<esc>O
 nmap <a-c> \"_ciw
 
 nmap <c-j> <Action>(PreviousTab)
@@ -124,15 +125,27 @@ nmap <leader>nc <Action>(NewClass)
 nmap <leader>fr <Action>(RenameFile)
 nmap gp `[v`]
 
-nmap <c-m-j> i<esc>"ryy"rp`^j
-nmap <c-m-k> i<esc>"ryy"rp`^
+nmap <c-s-j> i<esc>"ryy"rp`^j
+nmap <c-s-k> i<esc>"ryy"rp`^
+
+vmap <c-s-j> <Action>(EditorDuplicateLines)
+vmap <c-s-k> "ry`>"rpgv
 
 nmap <c-a> gg
 nmap <c-p> <Action>(GotoFile)
 imap <c-l> <Action>(copilot.applyInlays)
 
-vmap <c-m-j> <Action>(EditorDuplicateLines)
-vmap <c-m-k> "ry`>"rp
+nmap <s-a-j> <Action>(EditorCloneCaretBelow)
+nmap <s-a-k> <Action>(EditorCloneCaretAbove)
+
+nmap <leader>db V$%"_d
+nmap <leader>cb V$%"_c
+
+nmap <leader>, HvL
+nmap <c-a-k> :tabm+1<CR>
+nmap <c-a-j> :tabm-1<CR>
+
+map <a-w> ysiw)i
 
 map L $
 map H ^
