@@ -148,12 +148,6 @@ keymap('n', '<leader>dh', delete_errors(vim.diagnostic.severity.HINT),
 keymap('n', '<leader>dw', delete_errors(vim.diagnostic.severity.WARN),
   { silent = true, desc = 'Delete all warning lines' })
 
-keymap('n', 'x', '"_x', { silent = true, desc = 'Dont\'t yank x' })
-keymap('n', 's', '"_s', { silent = true, desc = 'Dont\'t yank s' })
-keymap('n', 'S', '"_S', { silent = true, desc = 'Dont\'t yank S' })
-keymap('n', 'c', '"_c', { silent = true, desc = 'Dont\'t yank c' })
-keymap('n', 'C', '"_C', { silent = true, desc = 'Dont\'t yank C' })
-
 keymap('n', '<C-c>', '<esc>', { silent = true, remap = true, desc = 'Remap to <esc>' })
 keymap('i', '<C-c>', '<esc>', { silent = true, remap = true, desc = 'Remap to <esc>' })
 
