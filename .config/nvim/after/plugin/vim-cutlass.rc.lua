@@ -3,4 +3,5 @@ if not vim.fn.exists('g:loadedCutlass') then
 end
 
 vim.keymap.set('n', 'd', 'd', { noremap = true })
+vim.keymap.set('v', 'd', 'd', { noremap = true })
 vim.keymap.set('n', 'dd', 'dd', { noremap = true })
