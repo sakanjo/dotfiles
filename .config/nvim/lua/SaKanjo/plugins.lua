@@ -69,6 +69,7 @@ packer.startup({ function(use)
   use 'svermeulen/vim-cutlass'
   use 'svermeulen/vim-subversive'
   use 'thinca/vim-textobj-between'
+  use 'tommcdo/vim-exchange'
   use 'tpope/vim-abolish'
   use 'tpope/vim-eunuch'
   use 'tpope/vim-fugitive'
