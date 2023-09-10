@@ -49,6 +49,7 @@ packer.startup({ function(use)
   use 'lervag/vimtex'
   use 'lewis6991/gitsigns.nvim'
   use 'lewis6991/impatient.nvim'
+  use 'machakann/vim-highlightedyank'
   use 'mfussenegger/nvim-dap'
   use 'mfussenegger/nvim-dap-python'
   use 'mg979/vim-visual-multi'
