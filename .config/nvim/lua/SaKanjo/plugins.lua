@@ -6,7 +6,7 @@ end
 vim.cmd [[packadd packer.nvim]]
 
 packer.startup({ function(use)
-  use "b0o/schemastore.nvim"
+  use 'b0o/schemastore.nvim'
   use '0oAstro/dim.lua'
   use 'AndrewRadev/sideways.vim'
   use 'AndrewRadev/splitjoin.vim'
