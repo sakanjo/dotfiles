@@ -3,7 +3,7 @@ function ...   ; cd ../.. ; end
 function ....  ; cd ../../.. ; end
 function ..... ; cd ../../../.. ; end
 
-function backup
+function backup --description 'backup current dir'
 	set format (basename (pwd))-(date +%Y-%m-%d.%H:%M:%S)
 	tar -zcvf ../$format.tar.gz ../(basename (pwd))/ 1>/dev/null 2>&1
 end
