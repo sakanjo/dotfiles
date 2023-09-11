@@ -32,7 +32,7 @@ function ghcl --description 'git clone from github and cd into it'
 	end
 end
 
-function gcl
+function gcl --description 'git clone and cd into it'
 	if test -z $argv[2]
 		g clone $argv && cd (basename $argv[1] .git)
 	else
