@@ -11,6 +11,9 @@ set -gx PATH ~/.config/composer/vendor/bin $PATH
 set -g GOPATH ~/go
 set -gx PATH $GOPATH/bin $PATH
 
+# Bun
+set -gx PATH ~/.bun/bin $PATH
+
 # Yarn
 if type -q yarn
 	set -gx PATH (yarn global bin) $PATH
