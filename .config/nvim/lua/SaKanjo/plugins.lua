@@ -53,6 +53,7 @@ packer.startup({ function(use)
   use 'mfussenegger/nvim-dap'
   use 'mfussenegger/nvim-dap-python'
   use 'mg979/vim-visual-multi'
+  use 'michaeljsmith/vim-indent-object'
   use 'nelstrom/vim-visual-star-search'
   use 'neovim/nvim-lspconfig'
   use 'numToStr/Comment.nvim'
