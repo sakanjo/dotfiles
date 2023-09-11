@@ -20,7 +20,7 @@ function rn --description "rename current dir"
 	cd $new_name
 end
 
-function gap
+function gap --description 'git add all and commit'
 	git add . && git commit -m "$argv[1]" && git push
 end
 
