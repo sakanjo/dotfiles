@@ -12,7 +12,7 @@ function beep --description "make two beeps"
 	echo -e '\a'; sleep 0.1; echo -e '\a';
 end
 
-function rn
+function rn --description "rename current dir"
 	set new_name $argv[1]
 	set current_dir (pwd)
 	cd ..
