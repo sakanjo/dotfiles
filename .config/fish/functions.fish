@@ -24,7 +24,7 @@ function gap --description 'git add all and commit'
 	git add . && git commit -m "$argv[1]" && git push
 end
 
-function ghcl
+function ghcl --description 'git clone from github and cd into it'
 	if test -z $argv[2]
 		gh repo clone $argv && cd (basename $argv[1] .git)
 	else
