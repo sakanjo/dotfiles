@@ -250,6 +250,7 @@ keymap('v', 'Y', "'my\"' .. v:register .. 'y`y'",
   { silent = true, expr = true, desc = 'Yank {motion} text [into register x]' })
 
 keymap('x', 'ga', '<Plug>(EasyAlign)', { silent = true, desc = 'Text alignment' })
+keymap('n', 'ga', '<Plug>(EasyAlign)', { silent = true, desc = 'Text alignment' })
 
 keymap('s', 'p', 'p')
 keymap('s', 'y', 'y')
