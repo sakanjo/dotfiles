@@ -169,3 +169,10 @@ endfunction
 imap <expr> <c-j> AppendScAnd('o')
 imap <expr> <c-s-j> AppendScAnd('O')
 imap <c-k> <esc>mdA;<esc>`da
+
+if has('ide')
+    if &ide =~? 'Android Studio'
+        nmap <leader>ra <Action>(android.deploy.ApplyChanges)
+        nmap <leader>ac <Action>(android.deploy.CodeSwap)
+    endif
+endif
