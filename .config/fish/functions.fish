@@ -40,7 +40,7 @@ function gcl --description 'git clone and cd into it'
 	end
 end
 
-function gcld
+function gcld --description 'git clone depth 1 and cd into it'
 	if test -z $argv[2]
 		g clone --depth 1 $argv && cd (basename $argv[1] .git)
 	else
