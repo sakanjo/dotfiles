@@ -155,3 +155,17 @@ vmap <a-y> <Action>($Copy)<esc>
 
 map L $
 map H ^
+
+imap <c-s-v> <Action>(EditorPaste)
+
+noremap x "_x
+
+function! AppendScAnd(char)
+  return function!() " Todo: Check for ; presence
+      return '<esc>A;<esc>' .. a:char
+  end
+endfunction
+
+imap <expr> <c-j> AppendScAnd('o')
+imap <expr> <c-s-j> AppendScAnd('O')
+imap <c-k> <esc>mdA;<esc>`da
