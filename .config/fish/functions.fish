@@ -48,7 +48,7 @@ function gcld --description 'git clone depth 1 and cd into it'
 	end
 end
 
-function mc
+function mc --description 'mkdir file and cd into it'
 	mkdir -p $argv[1]
 	cd $argv[1]
 end
