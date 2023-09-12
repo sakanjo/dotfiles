@@ -53,7 +53,7 @@ function mc --description 'mkdir file and cd into it'
 	cd $argv[1]
 end
 
-function sudo!!
+function sudo!! --description 'sudo last command'
 	eval sudo $history[1]
 end
 
