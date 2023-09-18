@@ -64,7 +64,7 @@ nvim_tree.setup({
   on_attach = on_attach
 })
 
-vim.api.nvim_set_keymap("n", "<C-b>", ":NvimTreeFocus<CR>", { silent = true, noremap = true })
+vim.api.nvim_set_keymap("n", "<C-b>", ":NvimTreeFindFile<CR>", { silent = true, noremap = true })
 
 vim.cmd [[autocmd Colorscheme * highlight NvimTreeNormal guibg=transparent]]
 vim.cmd [[autocmd Colorscheme * highlight NvimTreeWinSeparator guibg=transparent]]
