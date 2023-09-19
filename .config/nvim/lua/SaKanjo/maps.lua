@@ -196,6 +196,7 @@ keymap('n', '<C-a>', GoToImportArea, { silent = true, desc = 'Go to import regio
 keymap('n', '<A-a>', GoToBeginning, { silent = true, desc = 'Go to first line and then insert' })
 
 keymap('n', '<leader>ay', ":%y<CR>", { silent = true, desc = 'Select everything in the current file' })
+keymap('n', '<leader>a', N('ggVG'), { silent = true, desc = 'Select everything in the current file' })
 
 keymap('n', ',', GoAnd('^vg_', false), { silent = true, desc = 'Select current line without leading spaces' })
 
