@@ -211,15 +211,16 @@ keymap('n', '<leader>(', '<Plug>Dsurround("<Esc>hvbd',
 
 keymap('n', 'gp', '`[v`]', { silent = true, desc = 'Reselect pasted text' })
 
-keymap('n', '<S-del>', 'dd', { silent = true, desc = 'Remap to dd' })
+keymap('n', '<S-del>', '"_dd', { silent = true, desc = 'Remap to "_dd' })
+keymap('n', '<A-d>', '"_dd', { silent = true, desc = 'Remap to "_dd' })
 
 keymap('n', '<leader><C-k>', ":nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-k>",
   { silent = true, desc = 'Clear hlsearch' })
 
-keymap('n', '<C-M-j>', 'i<esc>"ryy"rp`^j', { silent = true, desc = 'Duplicate current line' })
-keymap('n', '<C-M-k>', 'i<esc>"ryy"rp`^', { silent = true, desc = 'Duplicate current line' })
-keymap('v', '<C-M-j>', '"ry`<k"rpgv', { silent = true, desc = 'Duplicate current line' })
-keymap('v', '<C-M-k>', '"ry`>"rpgv', { silent = true, desc = 'Duplicate current line' })
+keymap('n', '<C-S-j>', 'i<esc>"ryy"rp`^j', { silent = true, desc = 'Duplicate current line' })
+keymap('n', '<C-S-k>', 'i<esc>"ryy"rp`^', { silent = true, desc = 'Duplicate current line' })
+keymap('v', '<C-S-j>', '"ry`<k"rpgv', { silent = true, desc = 'Duplicate current line' })
+keymap('v', '<C-S-k>', '"ry`>"rpgv', { silent = true, desc = 'Duplicate current line' })
 
 keymap('n', '<M-k>', ':silent! m-2<CR>==', { silent = true, desc = 'Move current line' })
 keymap('n', '<M-j>', ':silent! m+1<CR>==', { silent = true, desc = 'Move current line' })

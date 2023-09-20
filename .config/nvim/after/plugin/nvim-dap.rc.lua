@@ -27,7 +27,7 @@ vim.keymap.set('n', '<leader>da', dap.step_over, { silent = true, desc = 'Step o
 vim.keymap.set('n', '<leader>do', dap.step_out, { silent = true, desc = 'Step out' })
 vim.keymap.set('n', '<leader>di', dap.step_into, { silent = true, desc = 'Step into' })
 
-vim.keymap.set('n', '<A-d>', function()
+vim.keymap.set('n', '<A-b>', function()
   if vim.v.count == 0 then
     dap.toggle_breakpoint()
   else
