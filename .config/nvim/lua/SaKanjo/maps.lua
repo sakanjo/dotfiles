@@ -31,8 +31,8 @@ keymap('n', '<S-l>', ':SidewaysJumpRight<CR>', { silent = true })
 keymap('n', '<S-M-h>', ':SidewaysLeft<CR>', { silent = true })
 keymap('n', '<S-M-l>', ':SidewaysRight<CR>', { silent = true })
 
-keymap('n', '<left>', ':BufferLineMovePrev<CR>', { silent = true, desc = 'Move tab to prev' })
-keymap('n', '<right>', ':BufferLineMoveNext<CR>', { silent = true, desc = 'Move tab to next' })
+keymap('n', '<C-M-j>', ':BufferLineMovePrev<CR>', { silent = true, desc = 'Move tab to prev' })
+keymap('n', '<C-M-k>', ':BufferLineMoveNext<CR>', { silent = true, desc = 'Move tab to next' })
 
 ---@param char string
 ---@return function
