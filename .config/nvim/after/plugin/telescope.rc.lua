@@ -34,7 +34,6 @@ local function cfg(keymap)
     preview = {
       hide_on_startup = false
     },
-    symbols = { 'method', 'function' },
     mappings = {
       i = {
         [keymap] = actions.close
