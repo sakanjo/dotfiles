@@ -6,7 +6,6 @@ end
 vim.cmd [[packadd packer.nvim]]
 
 packer.startup({ function(use)
-  use 'b0o/schemastore.nvim'
   use '0oAstro/dim.lua'
   use 'AndrewRadev/sideways.vim'
   use 'AndrewRadev/splitjoin.vim'
@@ -18,6 +17,7 @@ packer.startup({ function(use)
   use 'akinsho/bufferline.nvim'
   use 'akinsho/toggleterm.nvim'
   use 'andymass/vim-matchup'
+  use 'b0o/schemastore.nvim'
   use 'ckolkey/ts-node-action'
   use 'danymat/neogen'
   use 'easymotion/vim-easymotion'
@@ -76,6 +76,7 @@ packer.startup({ function(use)
   use 'tpope/vim-eunuch'
   use 'tpope/vim-fugitive'
   use 'tpope/vim-repeat'
+  use 'tpope/vim-rhubarb'
   use 'tpope/vim-sleuth'
   use 'tpope/vim-surround'
   use 'vim-test/vim-test'
