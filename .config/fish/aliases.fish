@@ -73,6 +73,9 @@ alias cor 'composer require'
 # howdoi
 alias howto 'howdoi -c -n 5 how to'
 
+# Gradle
+alias gw './gradlew'
+
 # Others
 alias ll 'exa -l -g --icons'
 alias lla 'll -a'
