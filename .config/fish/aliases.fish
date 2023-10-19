@@ -70,6 +70,9 @@ alias coi 'composer install'
 alias cou 'composer update'
 alias cor 'composer require'
 
+# howdoi
+alias howto 'howdoi -c -n 5 how to'
+
 # Others
 alias ll 'exa -l -g --icons'
 alias lla 'll -a'
