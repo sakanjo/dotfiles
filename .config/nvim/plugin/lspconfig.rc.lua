@@ -10,6 +10,18 @@ if mason_status then
   end
 end
 
+local augroup_format = vim.api.nvim_create_augroup("Format", { clear = true })
+local enable_format_on_save = function(_, bufnr)
+  vim.api.nvim_clear_autocmds({ group = augroup_format, buffer = bufnr })
+  vim.api.nvim_create_autocmd("BufWritePre", {
+    group = augroup_format,
+    buffer = bufnr,
+    callback = function()
+      vim.lsp.buf.format({ bufnr = bufnr })
+    end,
+  })
+end
+
 local on_attach = function(client, _)
   local opts = { noremap = true, silent = true }
 
@@ -30,7 +42,7 @@ local on_attach = function(client, _)
   vim.keymap.set('n', '<leader>ca', '<Cmd>Lspsaga code_action<CR>', opts)
 end
 
-local servers = { 'intelephense', 'cmake', 'dartls', 'csharp_ls', 'jdtls', 'solargraph', 'rust_analyzer',
+local servers = { 'intelephense', 'cmake', 'dartls', 'csharp_ls', 'solargraph', 'rust_analyzer',
   'tsserver', 'bashls', 'gopls', 'volar', 'texlab', 'tailwindcss' }
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
@@ -42,6 +54,23 @@ for _, lsp in pairs(servers) do
     root_dir = function() return vim.loop.cwd() end
   }
 end
+
+lspconfig.jdtls.setup({
+  handlers = {
+    ["$/progress"] = vim.schedule_wrap(
+      function(_, result)
+        if result.message == nil then
+          return
+        end
+
+        local command = vim.api.nvim_command
+        command 'echohl ModeMsg'
+        command(string.format('echo "%s"', result.message))
+        command 'echohl None'
+      end
+    ),
+  },
+})
 
 lspconfig.pyright.setup {
   on_attach = on_attach,
@@ -59,7 +88,10 @@ lspconfig.jsonls.setup {
 }
 
 lspconfig.lua_ls.setup {
-  on_attach = on_attach,
+  on_attach = function(client, bufnr)
+    on_attach(client, bufnr)
+    enable_format_on_save(client, bufnr)
+  end,
   capabilities = capabilities,
   settings = {
     Lua = {
