@@ -1,7 +1,7 @@
 {
   "init": {
-    "prefix": "init",
-    "description": "Init",
+    "prefix": "in",
+    "description": "init",
     "body": ["<?xml version=\"1.0\" encoding=\"UTF-8\"?>", "$0"]
   }
 }

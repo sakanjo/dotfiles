@@ -24,7 +24,7 @@
   },
   "in": {
     "prefix": "in",
-    "description": "Init",
+    "description": "init",
     "body": [
       "$1",
       "",
