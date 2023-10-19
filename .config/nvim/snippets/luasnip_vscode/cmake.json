@@ -1,17 +1,27 @@
 {
   "in": {
-    "prefix": "init",
+    "prefix": "in",
     "description": "Default",
     "body": [
-      "cmake_minimum_required(VERSION 3.13)  # CMake version check",
-      "project(${1:main})               # Create project \"$1\"",
-      "set(CMAKE_CXX_STANDARD 14)            # Enable c++14 standard",
+      "cmake_minimum_required(VERSION ${1:3.10})",
       "",
-      "# Add $1.cpp file of project root directory as source file",
-      "set(SOURCE_FILES ${2:main}.cpp)",
+      "set(EXE_NAME ${2:app})",
       "",
-      "# Add executable target with source files listed in SOURCE_FILES variable",
-      "add_executable($1 \\${SOURCE_FILES})"
+      "set(CMAKE_CXX_STANDARD 20)",
+      "set(CMAKE_EXPORT_COMPILE_COMMANDS ON)",
+      "",
+      "file(GLOB SOURCE_FILES",
+      "\tsrc/*.cpp",
+      ")",
+      "",
+      "project(${3:MyApp})",
+      "",
+      "add_executable(\\${EXE_NAME} \\${SOURCE_FILES})",
+      "",
+      "target_include_directories(\\${EXE_NAME}",
+      "\tPRIVATE",
+      "\t\\${PROJECT_SOURCE_DIR}/include",
+      ")"
     ]
   }
 }
