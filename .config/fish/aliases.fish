@@ -90,5 +90,5 @@ alias pbpaste 'xsel --clipboard --output'
 alias cpu 'ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%mem | head'
 alias repos 'grep ^[^#] /etc/apt/sources.list /etc/apt/sources.list.d/*'
 
-alias chmox='chmod +x'
-alias hosts='sudo $EDITOR /etc/hosts'
+alias chmox 'chmod +x'
+alias hosts 'sudo $EDITOR /etc/hosts'
