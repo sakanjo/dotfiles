@@ -56,6 +56,8 @@ for _, lsp in pairs(servers) do
 end
 
 lspconfig.jdtls.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
   handlers = {
     ["$/progress"] = vim.schedule_wrap(
       function(_, result)
