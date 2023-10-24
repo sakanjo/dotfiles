@@ -56,14 +56,7 @@ telescope.setup {
     file_ignore_patterns = { '.git/', 'vendor/', 'node_modules/', 'nova/' },
     mappings = {
       i = {
-        ["<C-j>"] = actions.move_selection_next,
-        ["<C-k>"] = actions.move_selection_previous,
         ['<C-s>'] = actions.select_horizontal,
-        ['<C-c>'] = actions.close,
-        ['<Esc>'] = actions.close,
-        ['<C-x>'] = actions.nop,
-        ['<C-n>'] = actions.nop,
-        ['<A-p>'] = actions_layout.toggle_preview
       }
     }
   },
@@ -73,11 +66,6 @@ telescope.setup {
       layout_config = {
         prompt_position = "top",
         width = .6
-      },
-      mappings = {
-        i = {
-          ['<C-p>'] = actions.close
-        }
       }
     },
     live_grep = cfg('<C-S-f>'),
