@@ -79,7 +79,7 @@ nmap <c-=> <Action>(UnsplitAll)
 map <leader><a-n> <Action>(SelectAllOccurrences)
 map <c-c> <esc>
 
-map <leader>cr <Action>(Refactorings.QuickListPopupAction)
+map <leader>rc <Action>(Refactorings.QuickListPopupAction)
 map <leader>= <Action>(ReformatCode)
 map <leader>o <Action>(OptimizeImports)
 
