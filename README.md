@@ -37,3 +37,4 @@
 - [rsync](https://github.com/WayneD/rsync)
 - [rclone](https://github.com/rclone/rclone)
 - [sshfs](https://github.com/libfuse/sshfs) - A network filesystem client to connect to SSH servers
+- [fx](https://github.com/antonmedv/fx) - Terminal JSON viewer & processor
