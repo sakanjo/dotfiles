@@ -31,3 +31,7 @@
 - [litecli](https://github.com/dbcli/litecli) - CLI for SQLite Databases with auto-completion and syntax highlighting
 - [mycli](https://github.com/dbcli/mycli) - CLI for MySQL Databases with auto-completion and syntax highlighting
 - [git-extras](https://github.com/tj/git-extras) - Git utilities
+- [entr](https://github.com/eradman/entr) - Run arbitrary commands when files change
+- [proxychains](https://github.com/haad/proxychains)
+- [rsync](https://github.com/WayneD/rsync)
+- [rclone](https://github.com/rclone/rclone)
