@@ -31,3 +31,4 @@
 - [litecli](https://github.com/dbcli/litecli) - CLI for SQLite Databases with auto-completion and syntax highlighting
 - [mycli](https://github.com/dbcli/mycli) - CLI for MySQL Databases with auto-completion and syntax highlighting
 - [git-standup](https://github.com/kamranahmedse/git-standup) - Recall what you did on the last working day
+- [git-extras](https://github.com/tj/git-extras) - Git utilities
