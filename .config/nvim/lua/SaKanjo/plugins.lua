@@ -1,103 +1,100 @@
-local status, packer = pcall(require, 'packer')
-if (not status) then
-  return print('Packer is not installed')
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable",
+    lazypath,
+  })
 end
+vim.opt.rtp:prepend(lazypath)
 
-vim.cmd [[packadd packer.nvim]]
-
-packer.startup({
-  function(use)
-    use '0oAstro/dim.lua'
-    use 'AndrewRadev/sideways.vim'
-    use 'AndrewRadev/splitjoin.vim'
-    use 'JoosepAlviste/nvim-ts-context-commentstring'
-    use 'L3MON4D3/LuaSnip'
-    use 'RRethy/nvim-treesitter-endwise'
-    use 'RRethy/vim-illuminate'
-    use 'airblade/vim-rooter'
-    use 'akinsho/bufferline.nvim'
-    use 'akinsho/toggleterm.nvim'
-    use 'andymass/vim-matchup'
-    use 'b0o/schemastore.nvim'
-    use 'ckolkey/ts-node-action'
-    use 'danymat/neogen'
-    use 'easymotion/vim-easymotion'
-    use 'farmergreg/vim-lastplace'
-    use 'folke/lsp-colors.nvim'
-    use 'folke/todo-comments.nvim'
-    use 'folke/tokyonight.nvim'
-    use 'folke/trouble.nvim'
-    use 'folke/which-key.nvim'
-    use 'github/copilot.vim'
-    use 'glepnir/lspsaga.nvim'
-    use 'hrsh7th/cmp-buffer'
-    use 'hrsh7th/cmp-calc'
-    use 'hrsh7th/cmp-cmdline'
-    use 'hrsh7th/cmp-nvim-lsp'
-    use 'hrsh7th/cmp-path'
-    use 'hrsh7th/nvim-cmp'
-    use 'ilyachur/cmake4vim'
-    use 'jayp0521/mason-null-ls.nvim'
-    use 'jghauser/mkdir.nvim'
-    use 'jiangmiao/auto-pairs'
-    use 'jose-elias-alvarez/null-ls.nvim'
-    use 'jose-elias-alvarez/nvim-lsp-ts-utils'
-    use 'junegunn/vim-easy-align'
-    use 'kana/vim-textobj-entire'
-    use 'kana/vim-textobj-user'
-    use 'leafOfTree/vim-vue-plugin'
-    use 'leoluz/nvim-dap-go'
-    use 'lervag/vimtex'
-    use 'lewis6991/gitsigns.nvim'
-    use 'lewis6991/impatient.nvim'
-    use 'machakann/vim-highlightedyank'
-    use 'mfussenegger/nvim-dap'
-    use 'mfussenegger/nvim-dap-python'
-    use 'mg979/vim-visual-multi'
-    use 'michaeljsmith/vim-indent-object'
-    use 'nelstrom/vim-visual-star-search'
-    use 'neovim/nvim-lspconfig'
-    use 'numToStr/Comment.nvim'
-    use 'nvim-lualine/lualine.nvim'
-    use 'nvim-tree/nvim-tree.lua'
-    use 'nvim-tree/nvim-web-devicons'
-    use 'nvim-treesitter/nvim-treesitter-textobjects'
-    use 'nvim-treesitter/playground'
-    use 'preservim/vim-markdown'
-    use 'ray-x/lsp_signature.nvim'
-    use 'rcarriga/nvim-dap-ui'
-    use 'rhysd/clever-f.vim'
-    use 'saadparwaiz1/cmp_luasnip'
-    use 'sickill/vim-pasta'
-    use 'svermeulen/vim-cutlass'
-    use 'svermeulen/vim-subversive'
-    use 'thinca/vim-textobj-between'
-    use 'tommcdo/vim-exchange'
-    use 'tpope/vim-abolish'
-    use 'tpope/vim-eunuch'
-    use 'tpope/vim-fugitive'
-    use 'tpope/vim-repeat'
-    use 'tpope/vim-rhubarb'
-    use 'tpope/vim-sleuth'
-    use 'tpope/vim-surround'
-    use 'vim-test/vim-test'
-    use 'wbthomason/packer.nvim'
-    use 'whatyouhide/vim-textobj-xmlattr'
-    use 'williamboman/mason-lspconfig.nvim'
-    use 'williamboman/mason.nvim'
-    use 'windwp/nvim-ts-autotag'
-    use 'xuhdev/vim-latex-live-preview'
-    use { 'iamcco/markdown-preview.nvim', run = function() vim.fn['mkdp#util#install']() end }
-    use { 'michaelb/sniprun', run = 'bash ./install.sh' }
-    use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
-    use { 'nvim-telescope/telescope.nvim', requires = { { 'nvim-lua/plenary.nvim' } } }
-    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-  end,
-  config = {
-    display = {
-      open_fn = function()
-        return require('packer.util').float({ border = 'single' })
-      end
-    }
-  }
+require('lazy').setup({
+  '0oAstro/dim.lua',
+  'AndrewRadev/sideways.vim',
+  'AndrewRadev/splitjoin.vim',
+  'JoosepAlviste/nvim-ts-context-commentstring',
+  'L3MON4D3/LuaSnip',
+  'RRethy/nvim-treesitter-endwise',
+  'RRethy/vim-illuminate',
+  'airblade/vim-rooter',
+  'akinsho/bufferline.nvim',
+  'akinsho/toggleterm.nvim',
+  'andymass/vim-matchup',
+  'b0o/schemastore.nvim',
+  'ckolkey/ts-node-action',
+  'danymat/neogen',
+  'easymotion/vim-easymotion',
+  'farmergreg/vim-lastplace',
+  'folke/lsp-colors.nvim',
+  'folke/todo-comments.nvim',
+  'folke/tokyonight.nvim',
+  'folke/trouble.nvim',
+  'folke/which-key.nvim',
+  'github/copilot.vim',
+  'glepnir/lspsaga.nvim',
+  'hrsh7th/cmp-buffer',
+  'hrsh7th/cmp-calc',
+  'hrsh7th/cmp-cmdline',
+  'hrsh7th/cmp-nvim-lsp',
+  'hrsh7th/cmp-path',
+  'hrsh7th/nvim-cmp',
+  'ilyachur/cmake4vim',
+  'jayp0521/mason-null-ls.nvim',
+  'jghauser/mkdir.nvim',
+  'jiangmiao/auto-pairs',
+  'jose-elias-alvarez/null-ls.nvim',
+  'jose-elias-alvarez/nvim-lsp-ts-utils',
+  'junegunn/vim-easy-align',
+  'kana/vim-textobj-user',
+  'leafOfTree/vim-vue-plugin',
+  'leoluz/nvim-dap-go',
+  'lervag/vimtex',
+  'lewis6991/gitsigns.nvim',
+  'lewis6991/impatient.nvim',
+  'machakann/vim-highlightedyank',
+  'mfussenegger/nvim-dap',
+  'mfussenegger/nvim-dap-python',
+  'mg979/vim-visual-multi',
+  'michaeljsmith/vim-indent-object',
+  'nelstrom/vim-visual-star-search',
+  'neovim/nvim-lspconfig',
+  'numToStr/Comment.nvim',
+  'nvim-lualine/lualine.nvim',
+  'nvim-tree/nvim-tree.lua',
+  'nvim-tree/nvim-web-devicons',
+  'nvim-treesitter/nvim-treesitter-textobjects',
+  'nvim-treesitter/playground',
+  'preservim/vim-markdown',
+  'ray-x/lsp_signature.nvim',
+  'rcarriga/nvim-dap-ui',
+  'rhysd/clever-f.vim',
+  'saadparwaiz1/cmp_luasnip',
+  'sickill/vim-pasta',
+  'svermeulen/vim-cutlass',
+  'svermeulen/vim-subversive',
+  'tommcdo/vim-exchange',
+  'tpope/vim-abolish',
+  'tpope/vim-eunuch',
+  'tpope/vim-fugitive',
+  'tpope/vim-repeat',
+  'tpope/vim-rhubarb',
+  'tpope/vim-sleuth',
+  'tpope/vim-surround',
+  'vim-test/vim-test',
+  'wbthomason/packer.nvim',
+  'williamboman/mason-lspconfig.nvim',
+  'williamboman/mason.nvim',
+  'windwp/nvim-ts-autotag',
+  'xuhdev/vim-latex-live-preview',
+  { 'iamcco/markdown-preview.nvim', build = function() vim.fn['mkdp#util#install']() end },
+  { 'michaelb/sniprun', build = 'bash ./install.sh' },
+  { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+  { 'nvim-telescope/telescope.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
+  { 'whatyouhide/vim-textobj-xmlattr', dependencies = { 'kana/vim-textobj-user' } },
+  { 'thinca/vim-textobj-between', dependencies = { 'kana/vim-textobj-user' } },
+  { 'kana/vim-textobj-entire', dependencies = { 'kana/vim-textobj-user' } },
+  { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' }
 })
