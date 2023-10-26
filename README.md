@@ -27,6 +27,7 @@
 - [github-markdown-toc](https://github.com/ekalinin/github-markdown-toc) - Easy TOC creation for GitHub README.md
 - [thefuck](https://github.com/nvbn/thefuck) - Magnificent app which corrects your previous console command
 - [ranger](https://github.com/ranger/ranger) - A VIM-inspired filemanager for the console
+- [lf](https://github.com/gokcehan/lf) - Terminal file manager
 - [gh-dash](https://github.com/dlvhdr/gh-dash) - A beautiful CLI dashboard for GitHub 🚀
 - [litecli](https://github.com/dbcli/litecli) - CLI for SQLite Databases with auto-completion and syntax highlighting
 - [mycli](https://github.com/dbcli/mycli) - CLI for MySQL Databases with auto-completion and syntax highlighting
