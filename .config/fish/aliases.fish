@@ -76,6 +76,9 @@ alias howto 'howdoi -c -n 5 how to'
 # Gradle
 alias gw './gradlew'
 
+# Git-extras
+alias root 'cd (git root)'
+
 # Others
 alias ll 'exa -l -g --icons'
 alias lla 'll -a'
