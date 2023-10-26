@@ -6,7 +6,7 @@ if mason_status then
   mason.setup()
   local status2, mason_lspconfig = pcall(require, "mason-lspconfig")
   if status2 then
-    mason_lspconfig.setup { automatic_installation = true }
+    mason_lspconfig.setup()
   end
 end
 
