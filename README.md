@@ -36,3 +36,4 @@
 - [proxychains](https://github.com/haad/proxychains)
 - [rsync](https://github.com/WayneD/rsync)
 - [rclone](https://github.com/rclone/rclone)
+- [sshfs](https://github.com/libfuse/sshfs) - A network filesystem client to connect to SSH servers
