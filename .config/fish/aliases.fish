@@ -87,6 +87,7 @@ alias unset 'set -e'
 
 alias mux 'tmuxinator'
 alias myip 'curl ifconfig.me'
+alias weather 'curl wttr.in'
 
 alias v 'nvim'
 alias c 'clear'
