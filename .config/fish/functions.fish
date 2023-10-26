@@ -80,7 +80,7 @@ function fish_user_key_bindings
 	bind ! bind_bang
 	bind '$' bind_dollar
 
-	bind \cE 'ranger'
+	bind \ee 'ranger'
 	bind \e\cE 'lf'
 	bind \cZ 'zi'
 end
