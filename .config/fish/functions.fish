@@ -82,4 +82,5 @@ function fish_user_key_bindings
 
 	bind \cE 'ranger'
 	bind \e\cE 'lf'
+	bind \cZ 'zi'
 end
