@@ -39,3 +39,4 @@
 - [sshfs](https://github.com/libfuse/sshfs) - A network filesystem client to connect to SSH servers
 - [fx](https://github.com/antonmedv/fx) - Terminal JSON viewer & processor
 - [extract](https://github.com/xvoland/Extract)
+- [yt-dlp](https://github.com/yt-dlp/yt-dlp) - A youtube-dl fork with additional features and fixes
