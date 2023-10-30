@@ -83,6 +83,11 @@ alias root 'cd (git root)'
 alias ll 'exa -l -g --icons'
 alias lla 'll -a'
 
+alias dl 'cd ~/Downloads'
+alias dt 'cd ~/Desktop'
+
+alias paths 'string split : $PATH'
+
 alias unset 'set -e'
 
 alias mux 'tmuxinator'
