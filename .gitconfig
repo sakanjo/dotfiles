@@ -12,5 +12,6 @@
   hist = log --pretty=format:\"%Cgreen%h %Creset%cd %Cblue[%cn] %Creset%s%C(yellow)%d%C(reset)\" --graph --date=relative --decorate --all
   whoami = config user.email
   tags = tag -l
+  aliases = config --get-regexp alias
 [hub]
   protocol = https
