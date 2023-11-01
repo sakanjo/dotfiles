@@ -17,7 +17,7 @@ tiling_drag modifier titlebar
 
 bindsym $mod+Return exec kitty
 bindsym $mod+Shift+q kill
-bindsym $mod+d exec --no-startup-id rofi -show run
+bindsym $mod+d exec --no-startup-id rofi -modi drun -show drun
 
 # change focus
 bindsym $mod+h focus left
