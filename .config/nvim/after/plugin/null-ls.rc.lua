@@ -21,6 +21,7 @@ null_ls.setup({
     formatting.rustfmt,
     formatting.clang_format,
     formatting.gofmt,
+    formatting.dart_format,
     formatting.pint.with({
       condition = function(utils)
         return utils.root_has_file({ './vendor/bin/pint' })
