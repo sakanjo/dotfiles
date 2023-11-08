@@ -89,12 +89,12 @@ require('lazy').setup({
   'williamboman/mason.nvim',
   'windwp/nvim-ts-autotag',
   'xuhdev/vim-latex-live-preview',
-  { 'iamcco/markdown-preview.nvim', build = function() vim.fn['mkdp#util#install']() end },
-  { 'michaelb/sniprun', build = 'bash ./install.sh' },
+  { 'iamcco/markdown-preview.nvim',             build = function() vim.fn['mkdp#util#install']() end },
+  { 'michaelb/sniprun',                         build = 'bash ./install.sh' },
   { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
-  { 'nvim-telescope/telescope.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
-  { 'whatyouhide/vim-textobj-xmlattr', dependencies = { 'kana/vim-textobj-user' } },
-  { 'thinca/vim-textobj-between', dependencies = { 'kana/vim-textobj-user' } },
-  { 'kana/vim-textobj-entire', dependencies = { 'kana/vim-textobj-user' } },
-  { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' }
+  { 'nvim-telescope/telescope.nvim',            dependencies = { 'nvim-lua/plenary.nvim' } },
+  { 'whatyouhide/vim-textobj-xmlattr',          dependencies = { 'kana/vim-textobj-user' } },
+  { 'thinca/vim-textobj-between',               dependencies = { 'kana/vim-textobj-user' } },
+  { 'kana/vim-textobj-entire',                  dependencies = { 'kana/vim-textobj-user' } },
+  { 'nvim-treesitter/nvim-treesitter',          build = ':TSUpdate' }
 })
