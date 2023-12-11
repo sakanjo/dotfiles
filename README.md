@@ -41,3 +41,4 @@
 - [extract](https://github.com/xvoland/Extract)
 - [yt-dlp](https://github.com/yt-dlp/yt-dlp) - A youtube-dl fork with additional features and fixes
 - [retry](https://github.com/kadwanev/retry) - Repeat a command until the command succeeds
+- [Fly Pie](https://github.com/Schneegans/Fly-Pie)
