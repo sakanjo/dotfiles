@@ -45,7 +45,7 @@ function RunCMD()
   elseif ext == 'sh' then
     Run("bash", true)
   elseif ext == 'go' then
-    Run("go run", true)
+    Run("go run .")
   elseif ext == 'c' or ext == 'cpp' or ext == 'h' or ext == 'hpp' then
     Run("make")
   elseif ext == 's' or ext == 'asm' then
