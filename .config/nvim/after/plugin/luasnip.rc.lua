@@ -26,7 +26,6 @@ require('luasnip.loaders.from_vscode').load({ paths = vim.fn.stdpath('config') .
 ls.config.set_config({
   updateevents = 'TextChanged,TextChangedI',
   enable_autosnippets = false,
-  history = true,
   delete_check_events = "TextChanged",
 })
 
