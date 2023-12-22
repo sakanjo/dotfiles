@@ -42,7 +42,7 @@ local on_attach = function(client, _)
   vim.keymap.set('n', '<leader>ca', '<Cmd>Lspsaga code_action<CR>', opts)
 end
 
-local servers = { 'intelephense', 'cmake', 'dartls', 'csharp_ls', 'solargraph', 'rust_analyzer',
+local servers = { 'intelephense', 'cmake', 'dartls', 'csharp_ls', 'solargraph',
   'tsserver', 'bashls', 'gopls', 'volar', 'texlab', 'tailwindcss' }
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
@@ -54,6 +54,19 @@ for _, lsp in pairs(servers) do
     root_dir = function() return vim.loop.cwd() end
   }
 end
+
+lspconfig.rust_analyzer.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  root_dir = function() return vim.loop.cwd() end,
+  settings = {
+    ['rust-analyzer'] = {
+      check = {
+        command = 'clippy'
+      }
+    }
+  }
+})
 
 lspconfig.jdtls.setup({
   on_attach = on_attach,
