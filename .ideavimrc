@@ -80,6 +80,7 @@ map <leader><a-n> <Action>(SelectAllOccurrences)
 map <c-c> <esc>
 
 map <leader>rc <Action>(Refactorings.QuickListPopupAction)
+map <leader>ri <Action>(Inline)
 map <leader>= <Action>(ReformatCode)
 map <leader>o <Action>(OptimizeImports)
 
@@ -122,6 +123,8 @@ nmap <leader>om <Action>(OverrideMethods)
 nmap <leader>nc <Action>(NewClass)
 
 nmap <leader>fr <Action>(RenameFile)
+nmap <leader>fc <Action>(CopyElement)
+nmap <leader>fm <Action>(Move)
 nmap gp `[v`]
 
 nmap <c-s-j> i<esc>"ryy"rp`^j
