@@ -151,6 +151,7 @@ nmap <c-s> <Action>(SaveDocument)
 
 nmap <leader>pc <Action>(CheckinProject)
 nmap <leader>of <Action>(SelectInProjectView)
+nmap <leader>lg <Action>(FindInPath)
 
 map <a-w> ysiw)i
 vmap <a-y> <Action>($Copy)<esc>
@@ -172,9 +173,20 @@ imap <expr> <c-j> AppendScAnd('o')
 imap <expr> <c-s-j> AppendScAnd('O')
 imap <c-k> <esc>mdA;<esc>`da
 
+nmap <leader>ra <Action>(Run)
+nmap <leader>ps <Action>(ShowProjectStructureSettings)
+
+nmap <C-a> gg}O
+nmap <A-a> ggO<esc>O
+
+nmap <leader>dat dat"_dd
+
 if has('ide')
     if &ide =~? 'Android Studio'
-        nmap <leader>ra <Action>(android.deploy.ApplyChanges)
-        nmap <leader>ac <Action>(android.deploy.CodeSwap)
+        nmap <leader>ac <Action>(android.deploy.ApplyChanges)
+        nmap <leader>cs <Action>(android.deploy.CodeSwap)
+    endif
+    if &ide =~? 'IntelliJ IDEA'
+        "
     endif
 endif
