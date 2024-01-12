@@ -184,6 +184,13 @@ nmap <A-a> ggO<esc>O
 
 nmap <leader>dat dat"_dd
 
+nmap <leader>nn <Action>(NewElement)
+nmap <leader>nf <Action>(NewFile)
+nmap <leader>np <Action>(NewDir)
+nmap <leader>nc <Action>(NewClass)
+nmap <leader>nm <Action>(NewModule)
+nmap <leader>np <Action>(NewProject)
+
 if has('ide')
     if &ide =~? 'Android Studio'
         nmap <leader>ac <Action>(android.deploy.ApplyChanges)
