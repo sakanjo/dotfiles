@@ -183,6 +183,7 @@ nmap <C-a> gg}O
 nmap <A-a> ggO<esc>O
 
 nmap <leader>dat dat"_dd
+nmap <leader>dap "_dap
 
 nmap <leader>nn <Action>(NewElement)
 nmap <leader>nf <Action>(NewFile)
@@ -190,6 +191,9 @@ nmap <leader>np <Action>(NewDir)
 nmap <leader>nc <Action>(NewClass)
 nmap <leader>nm <Action>(NewModule)
 nmap <leader>np <Action>(NewProject)
+
+nmap <leader>cap <Action>(CopyAbsolutePath)
+nmap <leader>cfn <Action>(CopyFileName)
 
 if has('ide')
     if &ide =~? 'Android Studio'
