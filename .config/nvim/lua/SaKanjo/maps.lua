@@ -240,6 +240,11 @@ keymap('v', '>', '>gv', { silent = true, desc = 'Indent and reselect' })
 keymap('n', '<C-i>', N('i\\<CR>\\<ESC>l'), { silent = true, desc = 'Break line' })
 keymap('n', '<A-u>', N('Jx'), { silent = true, desc = 'Join line without a space' })
 
+-- Delete chunks
+
+keymap('n', 'd]', 'V}"_d', { silent = true, desc = 'Delete until next space' })
+keymap('n', 'd[', 'V{"_d', { silent = true, desc = 'Delete until prev space' })
+
 -- Paste replace visual selection without copying it
 keymap('v', 'p', '"_c<C-r><C-o>+<Esc>', { silent = true, desc = 'Paste content' })
 
