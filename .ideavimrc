@@ -144,9 +144,6 @@ imap <c-l> <Action>(copilot.applyInlays)
 nmap <s-a-j> <Action>(EditorCloneCaretBelow)
 nmap <s-a-k> <Action>(EditorCloneCaretAbove)
 
-nmap <leader>db V$%"_d
-nmap <leader>cb V$%"_c
-
 nmap <leader>, HvL
 nmap <c-a-k> :tabm+1<CR>
 nmap <c-a-j> :tabm-1<CR>
@@ -160,7 +157,9 @@ map <a-w> ysiw)i
 vmap <a-y> <Action>($Copy)<esc>
 
 map L $
+vmap L $h
 map H ^
+vmap $ $h
 
 imap <c-s-v> <Action>(EditorPaste)
 
@@ -182,25 +181,73 @@ nmap <leader>ps <Action>(ShowProjectStructureSettings)
 nmap <C-a> gg}O
 nmap <A-a> ggO<esc>O
 
-nmap <leader>dat dat"_dd
-nmap <leader>dap "_dap
-
 nmap <leader>nn <Action>(NewElement)
 nmap <leader>nf <Action>(NewFile)
-nmap <leader>np <Action>(NewDir)
+nmap <leader>nd <Action>(NewDir)
 nmap <leader>nc <Action>(NewClass)
 nmap <leader>nm <Action>(NewModule)
 nmap <leader>np <Action>(NewProject)
 
 nmap <leader>cap <Action>(CopyAbsolutePath)
 nmap <leader>cfn <Action>(CopyFileName)
+nmap <leader>erc <Action>(editRunConfigurations)
+nmap <leader>pr <Action>(ExternalSystem.ProjectRefreshAction)
+
+" Delete to _
+
+nmap d] V}"_d
+nmap d[ V{"_d
+
+nmap <leader>dat dat"_dd
+nmap <leader>dap "_dap
+
+nmap <leader>db V$%"_d
+nmap <leader>cb V$%"_c
+
+nmap <leader>S "_S
+nmap <leader>C "_C
+
+nmap <leader>dii "_dii
+nmap <leader>cii "_cii
+
+nmap <leader>di( "_di(
+nmap <leader>di) "_di)
+
+nmap <leader>ci( "_ci(
+nmap <leader>ci) "_ci)
+
+nmap <leader>dia "_dia
+nmap <leader>daa "_daa
+
+" Comment
+
+nmap gcip vip<Action>(CommentByLineComment)<Esc>
+
+nmap gci( vi(<Action>(CommentByBlockComment)<Esc>
+nmap gci) vi)<Action>(CommentByBlockComment)<Esc>
+
+nmap gcia via<Action>(CommentByBlockComment)<Esc>
+nmap gcaa vaa<Action>(CommentByBlockComment)<Esc>
+
+nmap gcii vii<Action>(CommentByLineComment)<Esc>
+
+" Correct word deletion
+
+imap <C-w> <Action>(EditorDeleteToWordStart)
 
 if has('ide')
     if &ide =~? 'Android Studio'
         nmap <leader>ac <Action>(android.deploy.ApplyChanges)
         nmap <leader>cs <Action>(android.deploy.CodeSwap)
-    endif
-    if &ide =~? 'IntelliJ IDEA'
+    elseif &ide =~? 'PhpStorm'
+        nmap <leader>nc <Action>(PhpNewClass)
+    elseif &ide =~? 'IntelliJ IDEA'
         "
     endif
 endif
+
+map <up> <nop>
+map <left> <nop>
+map <right> <nop>
+map <down> <nop>
+
