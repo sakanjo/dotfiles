@@ -10,6 +10,8 @@ set sidescrolloff=6
 set scrolljump=6
 set timeoutlen=5000
 set clipboard+=unnamed
+set clipboard+=ideaput
+set relativenumbers
 
 " Plugins
 set ideastrictmode
@@ -29,6 +31,7 @@ set matchit
 " set quickscope
 
 nmap <c-x> <Action>(CloseContent)
+nmap <leader><c-x> <Action>(CloseAllEditors)
 nmap <c-b> :NERDTree<CR>
 
 nmap ge <Action>(GotoNextError)
@@ -83,6 +86,7 @@ map <leader>rc <Action>(Refactorings.QuickListPopupAction)
 map <leader>ri <Action>(Inline)
 map <leader>= <Action>(ReformatCode)
 map <leader>o <Action>(OptimizeImports)
+map <leader>iv <Action>(IntroduceVariable)
 
 map <leader>rf <Action>(RecentFiles)
 map <leader>rl <Action>(RecentLocations)
@@ -91,21 +95,25 @@ map <leader>sh <Action>(LocalHistory.ShowHistory)
 vnoremap < <gv
 vnoremap > >gv
 
-nmap <leader>gc <Action>(GotoClass)
-
 nmap <leader>tp <Action>(PinActiveTab)
 nmap <leader>rn <Action>(RenameElement)
 nmap <leader>ca <Action>(ShowIntentionActions)
 nmap <leader>tz <Action>(ToggleZenMode)
+nmap <leader>tf <Action>(ToggleFullScreen)
 nmap <leader>fu <Action>(FindUsages)
 
+nmap <leader>gc <Action>(GotoClass)
 nmap gi <Action>(GotoImplementation)
 nmap gd <Action>(GotoTypeDeclaration)
-nmap gtd <Action>(GotoDeclaration)
+nmap gD <Action>(GotoDeclaration)
 nmap gsm <Action>(GotoSuperMethod)
 nmap gt <Action>(GotoTest)
 nmap gb <Action>(Back)
 nmap gf <Action>(Forward)
+
+nmap <A-i> <Action>(Rerun)
+nmap <leader>rc <Action>(RunClass)
+nmap <leader>rft <Action>(RerunFailedTests)
 
 nmap <leader>gn <Action>(Generate)
 
@@ -157,7 +165,6 @@ map <a-w> ysiw)i
 vmap <a-y> <Action>($Copy)<esc>
 
 map L $
-vmap L $h
 map H ^
 vmap $ $h
 
@@ -234,6 +241,14 @@ nmap gcii vii<Action>(CommentByLineComment)<Esc>
 " Correct word deletion
 
 imap <C-w> <Action>(EditorDeleteToWordStart)
+
+nmap <leader>cl :echo line(".") + 1<cr>
+nmap Y y$
+
+nmap <leader>ta <Action>(HideAllWindows)
+nmap <leader>jl <Action>(JumpToLastWindow)
+
+nmap <leader>tb <Action>(ToggleLineBreakpoint)
 
 if has('ide')
     if &ide =~? 'Android Studio'
