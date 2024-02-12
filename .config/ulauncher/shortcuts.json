@@ -1,0 +1,62 @@
+{
+    "d7308fe9-b1ef-4663-8cda-d5f56b8f7e8e": {
+        "id": "d7308fe9-b1ef-4663-8cda-d5f56b8f7e8e",
+        "name": "Google Search",
+        "keyword": "g",
+        "cmd": "https://google.com.sa/search?q=%s",
+        "icon": "/usr/share/ulauncher/media/google-search-icon.png",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1647240710.7217672
+    },
+    "9b010279-c98f-4eb2-952c-ddb4f9a47c7f": {
+        "id": "9b010279-c98f-4eb2-952c-ddb4f9a47c7f",
+        "name": "Stack Overflow",
+        "keyword": "s",
+        "cmd": "https://stackoverflow.com/search?q=%s",
+        "icon": "/usr/share/ulauncher/media/stackoverflow-icon.svg",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1647240710.7218564
+    },
+    "61f76738-2bb9-4c72-946f-8049598f6bc0": {
+        "id": "61f76738-2bb9-4c72-946f-8049598f6bc0",
+        "name": "Wikipedia",
+        "keyword": "w",
+        "cmd": "https://en.wikipedia.org/wiki/%s",
+        "icon": "/usr/share/ulauncher/media/wikipedia-icon.png",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1647240710.721917
+    },
+    "313f0617-d420-4d9b-8031-bc6e11f429c2": {
+        "id": "313f0617-d420-4d9b-8031-bc6e11f429c2",
+        "name": "Github",
+        "keyword": "gt",
+        "cmd": "https://github.com/%s",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1707753142.3332663
+    },
+    "4f789859-2cce-405e-b790-6cbd47ca3326": {
+        "id": "4f789859-2cce-405e-b790-6cbd47ca3326",
+        "name": "Crates.io",
+        "keyword": "cr",
+        "cmd": "https://crates.io/crates/%s",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1707753485.081835
+    },
+    "8339b82f-d26c-413c-9c4c-a0a3537f232f": {
+        "id": "8339b82f-d26c-413c-9c4c-a0a3537f232f",
+        "name": "NPM",
+        "keyword": "np",
+        "cmd": "https://npmjs.com/package/%s",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1707753508.2080064
+    }
+}

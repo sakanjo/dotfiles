@@ -7,6 +7,7 @@
 - nvim config
 - ideavim config
 - gdb config
+- ulauncher config
 - kitty config
 - tmux config
 - git config
@@ -43,5 +44,6 @@
 - [fx](https://github.com/antonmedv/fx) - Terminal JSON viewer & processor
 - [extract](https://github.com/xvoland/Extract)
 - [yt-dlp](https://github.com/yt-dlp/yt-dlp) - A youtube-dl fork with additional features and fixes
+- [ulauncher](https://github.com/ulauncher/ulauncher) - Feature rich application Launcher for Linux
 - [retry](https://github.com/kadwanev/retry) - Repeat a command until the command succeeds
 - [Fly Pie](https://github.com/Schneegans/Fly-Pie)
