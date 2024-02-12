@@ -169,8 +169,6 @@ vmap $ $h
 
 imap <C-S-v> <Action>(EditorPaste)
 
-noremap x "_x
-
 function! AppendScAnd(char)
   return function!() " Todo: Check for ; presence
       return '<Esc>A;<Esc>' .. a:char
@@ -202,6 +200,7 @@ nmap <leader>pr <Action>(ExternalSystem.ProjectRefreshAction)
 " Delete to _
 
 noremap s "_s
+noremap x "_x
 
 nmap d] V}"_d
 nmap d[ V{"_d
