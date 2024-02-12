@@ -38,6 +38,7 @@
 - [proxychains](https://github.com/haad/proxychains)
 - [rsync](https://github.com/WayneD/rsync)
 - [rclone](https://github.com/rclone/rclone)
+- [syncthing](https://github.com/syncthing/syncthing) - Open Source Continuous File Synchronization
 - [sshfs](https://github.com/libfuse/sshfs) - A network filesystem client to connect to SSH servers
 - [fx](https://github.com/antonmedv/fx) - Terminal JSON viewer & processor
 - [extract](https://github.com/xvoland/Extract)
