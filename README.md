@@ -5,6 +5,8 @@
 ## Contents
 
 - nvim config
+- ideavim config
+- gdb config
 - kitty config
 - tmux config
 - git config
