@@ -9,8 +9,7 @@ set scrolloff=6
 set sidescrolloff=6
 set scrolljump=6
 set timeoutlen=5000
-set clipboard+=unnamed
-set clipboard+=ideaput
+set clipboard^=unnamedplus
 set relativenumbers
 
 " Plugins
@@ -30,30 +29,30 @@ set textobj-indent
 set matchit
 " set quickscope
 
-nmap <c-x> <Action>(CloseContent)
-nmap <leader><c-x> <Action>(CloseAllEditors)
-nmap <c-b> :NERDTree<CR>
+nmap <C-x> <Action>(CloseContent)
+nmap <leader><C-x> <Action>(CloseAllEditors)
+nmap <C-b> :NERDTree<CR>
 
 nmap ge <Action>(GotoNextError)
 nmap gE <Action>(GotoPreviousError)
 
-nmap <CR> o<esc>O
-nmap <a-c> \"_ciw
+nmap <CR> o<Esc>O
+nmap <A-c> \"_ciw
 
-nmap <c-j> <Action>(PreviousTab)
-nmap <c-k> <Action>(NextTab)
+nmap <C-j> <Action>(PreviousTab)
+nmap <C-k> <Action>(NextTab)
 
-nmap <c-h> <Action>(MethodUp)
-nmap <c-l> <Action>(MethodDown)
+nmap <C-h> <Action>(MethodUp)
+nmap <C-l> <Action>(MethodDown)
 
-map <a-k> <Action>(MoveLineUp)
-map <a-j> <Action>(MoveLineDown)
+map <A-k> <Action>(MoveLineUp)
+map <A-j> <Action>(MoveLineDown)
 
-nmap <c-a-h> <Action>(MoveStatementUp)
-nmap <c-a-l> <Action>(MoveStatementDown)
+nmap <C-A-h> <Action>(MoveStatementUp)
+nmap <C-A-l> <Action>(MoveStatementDown)
 
-nmap <a-h> <Action>(VcsShowPrevChangeMarker)
-nmap <a-l> <Action>(VcsShowNextChangeMarker)
+nmap <A-h> <Action>(VcsShowPrevChangeMarker)
+nmap <A-l> <Action>(VcsShowNextChangeMarker)
 
 nmap <leader>rh <Action>(Vcs.RollbackChangedLines)
 nmap <leader>rb <Action>(ChangesView.Revert)
@@ -64,23 +63,23 @@ nmap <leader>ch <Action>(CallHierarchy)
 nmap U <Action>($Redo)
 nmap Q <Action>(CloseProject)
 
-nmap <c-w>- <Action>(SplitHorizontally)
-nmap <c-w>\| <Action>(SplitVertically)
-nmap <c-w>z <Action>(MaximizeEditorInSplit)
+nmap <C-w>- <Action>(SplitHorizontally)
+nmap <C-w>\| <Action>(SplitVertically)
+nmap <C-w>z <Action>(MaximizeEditorInSplit)
 
-nmap <c-w><c-k> <Action>(StretchSplitToTop)
-nmap <c-w><c-j> <Action>(StretchSplitToBottom)
-nmap <c-w><c-h> <Action>(StretchSplitToLeft)
-nmap <c-w><c-l> <Action>(StretchSplitToRight)
+nmap <C-w><C-k> <Action>(StretchSplitToTop)
+nmap <C-w><C-j> <Action>(StretchSplitToBottom)
+nmap <C-w><C-h> <Action>(StretchSplitToLeft)
+nmap <C-w><C-l> <Action>(StretchSplitToRight)
 nmap <leader>zc <Action>(CollapseAllRegions)
 nmap <leader>zo <Action>(ExpandAllRegions)
 
-nmap <c-\> <Action>(NextSplitter)
-nmap <c-s-\> <Action>(PrevSplitter)
-nmap <c-=> <Action>(UnsplitAll)
+nmap <C-\> <Action>(NextSplitter)
+nmap <C-S-\> <Action>(PrevSplitter)
+nmap <C-=> <Action>(UnsplitAll)
 
-map <leader><a-n> <Action>(SelectAllOccurrences)
-map <c-c> <esc>
+map <leader><A-n> <Action>(SelectAllOccurrences)
+map <C-c> <Esc>
 
 map <leader>rc <Action>(Refactorings.QuickListPopupAction)
 map <leader>ri <Action>(Inline)
@@ -135,58 +134,58 @@ nmap <leader>fc <Action>(CopyElement)
 nmap <leader>fm <Action>(Move)
 nmap gp `[v`]
 
-nmap <c-s-j> i<esc>"ryy"rp`^j
-nmap <c-s-k> i<esc>"ryy"rp`^
+nmap <C-S-j> i<Esc>"ryy"rp`^j
+nmap <C-S-k> i<Esc>"ryy"rp`^
 
-vmap <c-s-j> <Action>(EditorDuplicateLines)
-vmap <c-s-k> "ry`>"rpgv
+vmap <C-S-j> <Action>(EditorDuplicateLines)
+vmap <C-S-k> "ry`>"rpgv
 
-nmap <a-d> "_dd
-xmap <a-d> "_dd
-vmap <a-d> "_d
+nmap <A-d> "_dd
+xmap <A-d> "_dd
+vmap <A-d> "_d
 
-nmap <c-a> gg
-nmap <c-p> <Action>(GotoFile)
-imap <c-l> <Action>(copilot.applyInlays)
+nmap <C-a> gg
+nmap <C-p> <Action>(GotoFile)
+imap <C-l> <Action>(copilot.applyInlays)
 
-nmap <s-a-j> <Action>(EditorCloneCaretBelow)
-nmap <s-a-k> <Action>(EditorCloneCaretAbove)
+nmap <S-A-j> <Action>(EditorCloneCaretBelow)
+nmap <S-A-k> <Action>(EditorCloneCaretAbove)
 
 nmap <leader>, HvL
-nmap <c-a-k> :tabm+1<CR>
-nmap <c-a-j> :tabm-1<CR>
-nmap <c-s> <Action>(SaveDocument)
+nmap <C-A-k> :tabm+1<CR>
+nmap <C-A-j> :tabm-1<CR>
+nmap <C-s> <Action>(SaveDocument)
 
 nmap <leader>pc <Action>(CheckinProject)
 nmap <leader>of <Action>(SelectInProjectView)
 nmap <leader>lg <Action>(FindInPath)
 
-map <a-w> ysiw)i
-vmap <a-y> <Action>($Copy)<esc>
+map <A-w> ysiw)i
+vmap <A-y> <Action>($Copy)<Esc>
 
 map L $
 map H ^
 vmap $ $h
 
-imap <c-s-v> <Action>(EditorPaste)
+imap <C-S-v> <Action>(EditorPaste)
 
 noremap x "_x
 
 function! AppendScAnd(char)
   return function!() " Todo: Check for ; presence
-      return '<esc>A;<esc>' .. a:char
+      return '<Esc>A;<Esc>' .. a:char
   end
 endfunction
 
-imap <expr> <c-j> AppendScAnd('o')
-imap <expr> <c-s-j> AppendScAnd('O')
-imap <c-k> <esc>mdA;<esc>`da
+imap <expr> <C-j> AppendScAnd('o')
+imap <expr> <C-S-j> AppendScAnd('O')
+imap <C-k> <Esc>mdA;<Esc>`da
 
 nmap <leader>ra <Action>(Run)
 nmap <leader>ps <Action>(ShowProjectStructureSettings)
 
 nmap <C-a> gg}O
-nmap <A-a> ggO<esc>O
+nmap <A-a> ggO<Esc>O
 
 nmap <leader>nn <Action>(NewElement)
 nmap <leader>nf <Action>(NewFile)
@@ -201,6 +200,8 @@ nmap <leader>erc <Action>(editRunConfigurations)
 nmap <leader>pr <Action>(ExternalSystem.ProjectRefreshAction)
 
 " Delete to _
+
+noremap s "_s
 
 nmap d] V}"_d
 nmap d[ V{"_d
@@ -250,6 +251,8 @@ nmap <leader>jl <Action>(JumpToLastWindow)
 
 nmap <leader>tb <Action>(ToggleLineBreakpoint)
 
+nmap gk <Action>(ShowErrorDescription)
+
 if has('ide')
     if &ide =~? 'Android Studio'
         nmap <leader>ac <Action>(android.deploy.ApplyChanges)
@@ -265,4 +268,3 @@ map <up> <nop>
 map <left> <nop>
 map <right> <nop>
 map <down> <nop>
-
