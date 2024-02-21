@@ -97,8 +97,8 @@ alias weather 'curl wttr.in'
 
 alias v 'nvim'
 alias c 'clear'
-alias i 'sudo apt-get install -y'
-alias r 'sudo apt-get remove -y'
+alias i 'sudo apt install -y'
+alias r 'sudo apt remove -y'
 
 alias pbcopy 'xsel --clipboard --input'
 alias pbpaste 'xsel --clipboard --output'
