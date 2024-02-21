@@ -80,10 +80,12 @@ alias gw './gradlew'
 # Git-extras
 alias root 'cd (git root)'
 
-# Others
-alias ll 'exa -l -g --icons'
-alias lla 'll -a'
+# Exa
+alias ls 'exa -g'
+alias ll 'ls -la --icons'
+alias l 'll -h'
 
+# Others
 alias dl 'cd ~/Downloads'
 alias dt 'cd ~/Desktop'
 
@@ -108,3 +110,5 @@ alias repos 'grep ^[^#] /etc/apt/sources.list /etc/apt/sources.list.d/*'
 
 alias chmox 'chmod +x'
 alias hosts 'sudo $EDITOR /etc/hosts'
+
+alias duh 'du -sh * | sort -h'
