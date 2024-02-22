@@ -32,7 +32,11 @@ alias sail '[ -f sail ] && bash sail || bash vendor/bin/sail'
 
 # Python
 alias py 'python3'
-alias activate '. ./venv/bin/activate.fish'
+
+alias ve 'py -m venv ./venv'
+alias va '. ./venv/bin/activate.fish'
+alias vd 'deactivate'
+
 alias pi 'pip3 install'
 alias pir 'pip3 install -r requirements.txt'
 alias pird 'pip3 install -r requirements-dev.txt'
