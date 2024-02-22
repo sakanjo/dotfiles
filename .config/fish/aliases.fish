@@ -81,9 +81,13 @@ alias gw './gradlew'
 alias root 'cd (git root)'
 
 # Exa
-alias ls 'exa -g'
-alias ll 'ls -la --icons'
-alias l 'll -h'
+alias ls 'exa -g --icons'
+alias ll 'ls -la'
+alias l 'll'
+
+# Vim
+alias v 'nvim'
+alias vim 'nvim --clean'
 
 # Others
 alias dl 'cd ~/Downloads'
@@ -97,7 +101,6 @@ alias mux 'tmuxinator'
 alias myip 'curl ifconfig.me'
 alias weather 'curl wttr.in'
 
-alias v 'nvim'
 alias c 'clear'
 alias i 'sudo apt install -y'
 alias r 'sudo apt remove -y'
