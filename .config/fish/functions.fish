@@ -40,6 +40,14 @@ function gcl --description 'git clone and cd into it'
 	end
 end
 
+function pr --description 'list prs or checkout'
+	if test -z $argv[1]
+		gh pr list
+	else
+		gh pr checkout $argv[1]
+	end
+end
+
 function gcld --description 'git clone depth 1 and cd into it'
 	if test -z $argv[2]
 		g clone --depth 1 $argv && cd (basename $argv[1] .git)

@@ -67,7 +67,6 @@ alias ghin 'git init -q && git add . && git commit -m "First commit" && gh repo 
 alias gha 'gh auth'
 alias ghb 'gh browse'
 alias ghi 'gh issue'
-alias pr 'gh pr checkout'
 
 # Composer
 alias co 'composer'
