@@ -7,6 +7,7 @@
 - nvim config
 - ideavim config
 - gdb config
+- npm config
 - ulauncher config
 - kitty config
 - tmux config
