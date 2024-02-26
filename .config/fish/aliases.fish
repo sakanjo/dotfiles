@@ -78,6 +78,7 @@ alias cor 'composer require'
 alias howto 'howdoi -c -n 5 how to'
 
 # Gradle
+alias gr 'gradle'
 alias gw './gradlew'
 
 # Git-extras
