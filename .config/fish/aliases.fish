@@ -44,26 +44,26 @@ alias pie 'pip3 install -e .'
 
 # Git
 alias g 'git'
-alias gi 'git init'
-alias gd 'git diff'
+alias gi 'g init'
+alias gd 'g diff'
 alias gdc 'gd --cached'
-alias ga 'git add'
-alias gst 'git status'
-alias gbr 'git branch'
-alias gp 'git push'
-alias gpl 'git pull'
-alias gpr 'git pull --rebase'
-alias grch 'git reset --hard && git clean -fd'
-alias gci 'git commit'
-alias gco 'git checkout'
-alias main 'git checkout main'
-alias master 'git checkout master'
-alias czps 'cz && git ps'
+alias ga 'g add'
+alias gst 'g status'
+alias gbr 'g branch'
+alias gp 'g push'
+alias gpl 'g pull'
+alias gpr 'g pull --rebase'
+alias grch 'g reset --hard && g clean -fd'
+alias gci 'g commit'
+alias gco 'g checkout'
+alias main 'g checkout main'
+alias master 'g checkout master'
+alias czps 'cz && g ps'
 alias gpa 'ga . && czps'
 
 # Gh
 alias ghr 'gh repo'
-alias ghin 'git init -q && git add . && git commit -m "First commit" && gh repo create -s . --push'
+alias ghin 'g init -q && g add . && g commit -m "First commit" && gh repo create -s . --push'
 alias gha 'gh auth'
 alias ghb 'gh browse'
 alias ghi 'gh issue'
@@ -81,7 +81,7 @@ alias howto 'howdoi -c -n 5 how to'
 alias gw './gradlew'
 
 # Git-extras
-alias root 'cd (git root)'
+alias root 'cd (g root)'
 
 # Exa
 alias ls 'exa -g --icons'
@@ -91,6 +91,11 @@ alias l 'll'
 # Vim
 alias v 'nvim'
 alias vim 'nvim --clean'
+
+# Cargo
+alias c 'cargo'
+alias cb 'cargo build -q'
+alias cr 'cargo run -q'
 
 # Others
 alias dl 'cd ~/Downloads'
@@ -104,7 +109,8 @@ alias mux 'tmuxinator'
 alias myip 'curl ifconfig.me'
 alias weather 'curl wttr.in'
 
-alias c 'clear'
+alias cls 'clear'
+
 alias i 'sudo apt install -y'
 alias r 'sudo apt remove -y'
 

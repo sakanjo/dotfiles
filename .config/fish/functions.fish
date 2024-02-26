@@ -21,7 +21,7 @@ function rn --description "rename current dir"
 end
 
 function gap --description 'git add all and commit'
-	git add . && git commit -m "$argv[1]" && git push
+	g add . && g commit -m "$argv[1]" && g push
 end
 
 function ghcl --description 'git clone from github and cd into it'
