@@ -5,9 +5,6 @@ ts_config.setup {
   endwise = {
     enable = true
   },
-  context_commentstring = {
-    enable = true
-  },
   highlight = {
     enable = true,
     disable = { 'NvimTree' },
