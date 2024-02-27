@@ -37,7 +37,6 @@ nmap ge <Action>(GotoNextError)
 nmap gE <Action>(GotoPreviousError)
 
 nmap <CR> o<Esc>O
-nmap <A-c> \"_ciw
 
 nmap <C-j> <Action>(PreviousTab)
 nmap <C-k> <Action>(NextTab)
@@ -140,10 +139,6 @@ nmap <C-S-k> i<Esc>"ryy"rp`^
 vmap <C-S-j> <Action>(EditorDuplicateLines)
 vmap <C-S-k> "ry`>"rpgv
 
-nmap <A-d> "_dd
-xmap <A-d> "_dd
-vmap <A-d> "_d
-
 nmap <C-a> gg
 nmap <C-p> <Action>(GotoFile)
 imap <C-l> <Action>(copilot.applyInlays)
@@ -199,20 +194,26 @@ nmap <leader>pr <Action>(ExternalSystem.ProjectRefreshAction)
 
 " Delete to _
 
+nmap <A-c> "_ciw
+
+nmap <A-d> "_dd
+xmap <A-d> "_dd
+vmap <A-d> "_d
+
 noremap s "_s
 noremap x "_x
 
 nmap d] V}"_d
 nmap d[ V{"_d
 
+noremap S "_S
+noremap C "_C
+
 nmap <leader>dat dat"_dd
 nmap <leader>dap "_dap
 
 nmap <leader>db V$%"_d
 nmap <leader>cb V$%"_c
-
-nmap <leader>S "_S
-nmap <leader>C "_C
 
 nmap <leader>dii "_dii
 nmap <leader>cii "_cii
