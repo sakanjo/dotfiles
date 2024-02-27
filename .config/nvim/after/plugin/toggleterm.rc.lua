@@ -35,7 +35,7 @@ function RunCMD()
   local ext = (ToggleTerm_Filename and vim.fn.fnamemodify(ToggleTerm_Filename, ':e')) or vim.fn.expand("%:e")
 
   local function Run(cmd, file)
-    toggleterm.exec("c; " .. cmd .. (file and (" " .. filename) or ""), 99, nil, nil, 'vertical')
+    toggleterm.exec("cls; " .. cmd .. (file and (" " .. filename) or ""), 99, nil, nil, 'vertical')
   end
 
   if ext == 'py' then

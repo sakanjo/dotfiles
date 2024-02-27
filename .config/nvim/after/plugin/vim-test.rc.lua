@@ -9,7 +9,7 @@ vim.keymap.set('n', '<Leader>tc', ':TestClass<CR>', { silent = true })
 vim.keymap.set('n', '<A-i>', ':TestLast<CR>', { silent = true })
 
 local function EchoStrategy(cmd)
-  toggleterm.exec('c; ' .. cmd, 101, nil, nil, 'vertical')
+  toggleterm.exec('cls; ' .. cmd, 101, nil, nil, 'vertical')
 end
 
 vim.g['test#custom_strategies'] = { toggle_term = EchoStrategy }
