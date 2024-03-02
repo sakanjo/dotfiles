@@ -1,15 +1,16 @@
 # npm
-alias nid 'npm install -D'
-alias ni 'npm install'
-alias nr 'npm run'
-alias nrc 'npm run check'
-alias nrd 'npm run dev'
-alias nrp 'npm run preview'
-alias nrb 'npm run build'
-alias nrs 'npm run start'
-alias nrt 'npm run test'
-alias nrtw 'npm run test:watch'
-alias nrw 'npm run watch'
+alias n 'pnpm'
+alias ni 'n install'
+alias nr 'n run'
+alias nid 'ni -D'
+alias nrc 'nr check'
+alias nrd 'nr dev'
+alias nrp 'nr preview'
+alias nrb 'nr build'
+alias nrs 'nr start'
+alias nrt 'nr test'
+alias nrtw 'nr test:watch'
+alias nrw 'nr watch'
 
 # Laravel
 alias a 'php artisan'
@@ -70,9 +71,9 @@ alias ghi 'gh issue'
 
 # Composer
 alias co 'composer'
-alias coi 'composer install'
-alias cou 'composer update'
-alias cor 'composer require'
+alias coi 'co install'
+alias cou 'co update'
+alias cor 'co require'
 
 # howdoi
 alias howto 'howdoi -c -n 5 how to'
