@@ -5,16 +5,16 @@ local keymap = vim.keymap.set
 keymap('n', 'zw', 'ySat<', { silent = true, remap = true })
 keymap('n', '<leader>zw', '%V%St', { silent = true, remap = true })
 
-keymap('i', '<C-S-CR>', NI('\\<esc>O'), { silent = true })
-keymap('i', '<C-CR>', NI('\\<esc>o'), { silent = true })
+keymap('i', '<C-S-CR>', NI('\\<Esc>O'), { silent = true })
+keymap('i', '<C-CR>', NI('\\<Esc>o'), { silent = true })
 
-keymap('i', '<A-j>', '<esc>bi', { silent = true })
-keymap('i', '<A-k>', '<esc>ea', { silent = true })
+keymap('i', '<A-j>', '<Esc>bi', { silent = true })
+keymap('i', '<A-k>', '<Esc>ea', { silent = true })
 
 keymap('i', '<A-h>', '<left>', { silent = true })
 keymap('i', '<A-l>', '<right>', { silent = true })
 
-keymap("n", '<C-S-k>', '"_dd', { silent = true })
+keymap('n', '<C-S-k>', '"_dd', { silent = true })
 
 keymap('o', 'aa', '<Plug>SidewaysArgumentTextobjA', { silent = true })
 keymap('x', 'aa', '<Plug>SidewaysArgumentTextobjA', { silent = true })
@@ -38,7 +38,7 @@ keymap('n', '<C-M-k>', ':BufferLineMoveNext<CR>', { silent = true, desc = 'Move 
 ---@return function
 local function AppendScAnd(char)
   return function()
-    _NI('\\<esc>' .. (vim.fn.getline('.'):sub(-1) == ';' and char or 'A;\\<esc>' .. char))
+    _NI('\\<Esc>' .. (vim.fn.getline('.'):sub(-1) == ';' and char or 'A;\\<Esc>' .. char))
   end
 end
 
@@ -46,7 +46,7 @@ keymap('i', '<C-j>', AppendScAnd('o'), { silent = true, desc = 'Append ; to the 
 keymap('i', '<C-M-j>', AppendScAnd('O'), { silent = true, desc = 'Append ; to the end and do O' })
 keymap('i', '<C-k>', function()
   if vim.fn.getline('.'):sub(-1) ~= ';' then
-    _N('mdA;\\<esc>`da')
+    _N('mdA;\\<Esc>`da')
   end
 end, { silent = true, desc = 'Append ; to the end and go back' })
 
@@ -78,18 +78,18 @@ local function GoAnd(map, insert)
   end
 end
 
-keymap("n", "A", GoAnd('A'), { silent = true, desc = 'Begin a new line above the cursor and insert text' })
-keymap("n", "<A-o>", GoAnd('o\\<esc>ko'), { silent = true, desc = 'Begin a new line above the cursor and insert text' })
-keymap("n", "o", GoAnd('o'), { silent = true, desc = 'Begin a new line below the cursor and insert text' })
-keymap("n", "O", GoAnd('O'), { silent = true, desc = 'Begin a new line above the cursor and insert text' })
-keymap("n", "<CR>", function()
-  local cmd = 'O\\<esc>o'
+keymap('n', "A", GoAnd('A'), { silent = true, desc = 'Begin a new line above the cursor and insert text' })
+keymap('n', "<A-o>", GoAnd('o\\<Esc>ko'), { silent = true, desc = 'Begin a new line above the cursor and insert text' })
+keymap('n', "o", GoAnd('o'), { silent = true, desc = 'Begin a new line below the cursor and insert text' })
+keymap('n', "O", GoAnd('O'), { silent = true, desc = 'Begin a new line above the cursor and insert text' })
+keymap('n', "<CR>", function()
+  local cmd = 'O\\<Esc>o'
   if vim.v.count == 0 then
     if string.match(vim.fn.getline('.'), "^%s*$") ~= nil then
     elseif string.match(vim.fn.getline(vim.fn.line('.') + 1), "^%s*$") ~= nil then
       cmd = 'j' .. cmd
     else
-      cmd = 'o\\<esc>' .. cmd
+      cmd = 'o\\<Esc>' .. cmd
     end
   else
     if string.match(vim.fn.getline(vim.v.count), "^%s*$") ~= nil then
@@ -97,7 +97,7 @@ keymap("n", "<CR>", function()
     elseif string.match(vim.fn.getline(vim.v.count + 1), "^%s*$") ~= nil then
       cmd = 'ggj' .. cmd
     else
-      cmd = 'ggo\\<esc>' .. cmd
+      cmd = 'ggo\\<Esc>' .. cmd
     end
     cmd = vim.v.count .. cmd
   end
@@ -148,8 +148,8 @@ keymap('n', '<leader>dh', delete_errors(vim.diagnostic.severity.HINT),
 keymap('n', '<leader>dw', delete_errors(vim.diagnostic.severity.WARN),
   { silent = true, desc = 'Delete all warning lines' })
 
-keymap('n', '<C-c>', '<esc>', { silent = true, remap = true, desc = 'Remap to <esc>' })
-keymap('i', '<C-c>', '<esc>', { silent = true, remap = true, desc = 'Remap to <esc>' })
+keymap('n', '<C-c>', '<Esc>', { silent = true, remap = true, desc = 'Remap to <Esc>' })
+keymap('i', '<C-c>', '<Esc>', { silent = true, remap = true, desc = 'Remap to <Esc>' })
 
 -- File utils
 keymap('n', '<leader>f<del>', ':silent! Delete!<CR>', { silent = true, desc = 'Delete current file' })
@@ -188,7 +188,7 @@ local function GoToBeginning()
   if string.match(vim.fn.getline('.'), "^%s*$") ~= nil then
     _NI('S')
   else
-    vim.cmd('exe "keepj norm! O\\<esc>O" | star')
+    vim.cmd('exe "keepj norm! O\\<Esc>O" | star')
   end
 end
 
@@ -217,8 +217,8 @@ keymap('n', '<A-d>', '"_dd', { silent = true, desc = 'Remap to "_dd' })
 keymap('n', '<leader><C-k>', ":nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-k>",
   { silent = true, desc = 'Clear hlsearch' })
 
-keymap('n', '<C-S-j>', 'i<esc>"ryy"rp`^j', { silent = true, desc = 'Duplicate current line' })
-keymap('n', '<C-S-k>', 'i<esc>"ryy"rp`^', { silent = true, desc = 'Duplicate current line' })
+keymap('n', '<C-S-j>', 'i<Esc>"ryy"rp`^j', { silent = true, desc = 'Duplicate current line' })
+keymap('n', '<C-S-k>', 'i<Esc>"ryy"rp`^', { silent = true, desc = 'Duplicate current line' })
 keymap('v', '<C-S-j>', '"ry`<k"rpgv', { silent = true, desc = 'Duplicate current line' })
 keymap('v', '<C-S-k>', '"ry`>"rpgv', { silent = true, desc = 'Duplicate current line' })
 
@@ -237,7 +237,7 @@ keymap('n', '<leader><C-x>', ':qa!<cr>', { silent = true, desc = 'Closes the cur
 keymap('v', '<', '<gv', { silent = true, desc = 'Indent and reselect' })
 keymap('v', '>', '>gv', { silent = true, desc = 'Indent and reselect' })
 
-keymap('n', '<C-i>', N('i\\<CR>\\<ESC>l'), { silent = true, desc = 'Break line' })
+keymap('n', '<A-e>', N('i\\<CR>\\<Esc>'), { silent = true, desc = 'Break line' })
 keymap('n', '<A-u>', N('Jx'), { silent = true, desc = 'Join line without a space' })
 
 -- Delete chunks
@@ -249,6 +249,19 @@ keymap('n', 'd[', 'V{"_d', { silent = true, desc = 'Delete until prev space' })
 keymap('v', 'p', '"_c<C-r><C-o>+<Esc>', { silent = true, desc = 'Paste content' })
 
 keymap('n', 'q:', ':q<CR>', { silent = true, desc = 'Disable annoying command line thing' })
+
+-- Execute run-on
+
+keymap('n', '<leader>r', ':silent !/home/e4404/gits/oss/run-on/target/debug/run-on run <CR>',
+  { silent = true, desc = 'Execute run-on run' })
+keymap('n', '<leader>1', ':silent !/home/e4404/gits/oss/run-on/target/debug/run-on run --id 1 <CR>',
+  { silent = true, desc = 'Execute run-on run --id 1' })
+keymap('n', '<leader>2', ':silent !/home/e4404/gits/oss/run-on/target/debug/run-on run --id 2 <CR>',
+  { silent = true, desc = 'Execute run-on run --id 2' })
+keymap('n', '<leader>3', ':silent !/home/e4404/gits/oss/run-on/target/debug/run-on run --id 3 <CR>',
+  { silent = true, desc = 'Execute run-on run --id 3' })
+keymap('n', '<leader>4', ':silent !/home/e4404/gits/oss/run-on/target/debug/run-on run --id 4 <CR>',
+  { silent = true, desc = 'Execute run-on run --id 4' })
 
 -- Maintain the cursor position when yanking a visual selection
 keymap('v', 'y', "'my\"' .. v:register .. 'y`y'",
@@ -275,5 +288,5 @@ keymap('i', '<up>', '<nop>')
 keymap('i', '<down>', '<nop>')
 keymap('i', '<left>', '<nop>')
 keymap('i', '<right>', '<nop>')
-keymap('s', '<right>', '<esc>gvo<esc>a', { silent = true })
-keymap('s', '<left>', '<esc>i', { silent = true })
+keymap('s', '<right>', '<Esc>gvo<Esc>a', { silent = true })
+keymap('s', '<left>', '<Esc>i', { silent = true })
