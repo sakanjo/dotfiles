@@ -37,6 +37,7 @@ nmap ge <Action>(GotoNextError)
 nmap gE <Action>(GotoPreviousError)
 
 nmap <CR> o<Esc>O
+nmap <A-c> \"_ciw
 
 nmap <C-j> <Action>(PreviousTab)
 nmap <C-k> <Action>(NextTab)
@@ -83,7 +84,7 @@ map <C-c> <Esc>
 map <leader>rc <Action>(Refactorings.QuickListPopupAction)
 map <leader>ri <Action>(Inline)
 map <leader>= <Action>(ReformatCode)
-map <leader>o <Action>(OptimizeImports)
+map <leader>oi <Action>(OptimizeImports)
 map <leader>iv <Action>(IntroduceVariable)
 
 map <leader>rf <Action>(RecentFiles)
@@ -139,6 +140,10 @@ nmap <C-S-k> i<Esc>"ryy"rp`^
 vmap <C-S-j> <Action>(EditorDuplicateLines)
 vmap <C-S-k> "ry`>"rpgv
 
+nmap <A-d> "_dd
+xmap <A-d> "_dd
+vmap <A-d> "_d
+
 nmap <C-a> gg
 nmap <C-p> <Action>(GotoFile)
 imap <C-l> <Action>(copilot.applyInlays)
@@ -175,6 +180,7 @@ imap <expr> <C-S-j> AppendScAnd('O')
 imap <C-k> <Esc>mdA;<Esc>`da
 
 nmap <leader>ra <Action>(Run)
+nmap <leader>rd <Action>(Debug)
 nmap <leader>ps <Action>(ShowProjectStructureSettings)
 
 nmap <C-a> gg}O
@@ -194,26 +200,20 @@ nmap <leader>pr <Action>(ExternalSystem.ProjectRefreshAction)
 
 " Delete to _
 
-nmap <A-c> "_ciw
-
-nmap <A-d> "_dd
-xmap <A-d> "_dd
-vmap <A-d> "_d
-
 noremap s "_s
 noremap x "_x
 
 nmap d] V}"_d
 nmap d[ V{"_d
 
-noremap S "_S
-noremap C "_C
-
 nmap <leader>dat dat"_dd
 nmap <leader>dap "_dap
 
 nmap <leader>db V$%"_d
 nmap <leader>cb V$%"_c
+
+nmap <leader>S "_S
+nmap <leader>C "_C
 
 nmap <leader>dii "_dii
 nmap <leader>cii "_cii
@@ -252,6 +252,10 @@ nmap <leader>jl <Action>(JumpToLastWindow)
 nmap <leader>tb <Action>(ToggleLineBreakpoint)
 
 nmap gk <Action>(ShowErrorDescription)
+nmap <leader>ct  <Action>(ChangeLaf)
+
+nmap <leader>od <Action>(ActivateDatabaseToolWindow)
+nmap <leader>td <Action>(ToggleRenderedDocPresentation)
 
 if has('ide')
     if &ide =~? 'Android Studio'
@@ -263,8 +267,3 @@ if has('ide')
         "
     endif
 endif
-
-map <up> <nop>
-map <left> <nop>
-map <right> <nop>
-map <down> <nop>
