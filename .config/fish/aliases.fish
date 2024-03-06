@@ -100,6 +100,9 @@ alias c 'cargo'
 alias cb 'cargo build -q'
 alias cr 'cargo run -q'
 
+# Docker
+alias d 'docker'
+
 # Others
 alias dl 'cd ~/Downloads'
 alias dt 'cd ~/Desktop'
