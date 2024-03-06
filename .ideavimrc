@@ -200,6 +200,8 @@ nmap <leader>pr <Action>(ExternalSystem.ProjectRefreshAction)
 
 " Delete to _
 
+noremap cgn "_cgn
+
 noremap s "_s
 noremap x "_x
 
@@ -257,10 +259,22 @@ nmap <leader>ct  <Action>(ChangeLaf)
 nmap <leader>od <Action>(ActivateDatabaseToolWindow)
 nmap <leader>td <Action>(ToggleRenderedDocPresentation)
 
+" Switch case
+map <A-s> <Action>(StringManipulation.SwitchStyleAction)
+
+map crc :action StringManipulation.ToCamelCase<CR>
+map crs :action StringManipulation.ToSnakeCase<CR>
+map crk :action StringManipulation.ToKebabCase<CR>
+map cru :action osmedile.intellij.stringmanip.ToUpperCaseAction<CR>
+map crl :action osmedile.intellij.stringmanip.ToLowerCaseAction<CR>
+map crp :action StringManipulation.ToPascalCase<CR>
+map cri :action osmedile.intellij.stringmanip.SwapCaseAction<CR>
+
 if has('ide')
     if &ide =~? 'Android Studio'
         nmap <leader>ac <Action>(android.deploy.ApplyChanges)
         nmap <leader>cs <Action>(android.deploy.CodeSwap)
+        nmap <leader>rd <Action>(ActivateRunningDevicesToolWindow)
     elseif &ide =~? 'PhpStorm'
         nmap <leader>nc <Action>(PhpNewClass)
     elseif &ide =~? 'IntelliJ IDEA'
