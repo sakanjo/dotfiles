@@ -180,6 +180,7 @@ imap <expr> <C-S-j> AppendScAnd('O')
 imap <C-k> <Esc>mdA;<Esc>`da
 
 nmap <leader>ra <Action>(Run)
+nmap <leader>sa <Action>(RunToolbarMainMultipleStopAction)
 nmap <leader>rd <Action>(Debug)
 nmap <leader>ps <Action>(ShowProjectStructureSettings)
 
@@ -200,7 +201,7 @@ nmap <leader>pr <Action>(ExternalSystem.ProjectRefreshAction)
 
 " Delete to _
 
-noremap cgn "_cgn
+noremap c "_c
 
 noremap s "_s
 noremap x "_x
@@ -262,13 +263,22 @@ nmap <leader>td <Action>(ToggleRenderedDocPresentation)
 " Switch case
 map <A-s> <Action>(StringManipulation.SwitchStyleAction)
 
-map crc :action StringManipulation.ToCamelCase<CR>
-map crs :action StringManipulation.ToSnakeCase<CR>
-map crk :action StringManipulation.ToKebabCase<CR>
-map cru :action osmedile.intellij.stringmanip.ToUpperCaseAction<CR>
-map crl :action osmedile.intellij.stringmanip.ToLowerCaseAction<CR>
-map crp :action StringManipulation.ToPascalCase<CR>
-map cri :action osmedile.intellij.stringmanip.SwapCaseAction<CR>
+nmap crc :action StringManipulation.ToCamelCase<CR>
+nmap crs :action StringManipulation.ToSnakeCase<CR>
+nmap crk :action StringManipulation.ToKebabCase<CR>
+nmap cru :action osmedile.intellij.stringmanip.ToUpperCaseAction<CR>
+nmap crl :action osmedile.intellij.stringmanip.tolowercaseaction<cr>
+nmap crp :action StringManipulation.ToPascalCase<CR>
+nmap cri :action osmedile.intellij.stringmanip.SwapCaseAction<CR>
+
+vmap <leader>crc :action StringManipulation.ToCamelCase<CR>
+vmap <leader>crs :action StringManipulation.ToSnakeCase<CR>
+vmap <leader>crk :action StringManipulation.ToKebabCase<CR>
+vmap <leader>cru :action osmedile.intellij.stringmanip.ToUpperCaseAction<CR>
+vmap <leader>crl :action osmedile.intellij.stringmanip.tolowercaseaction<cr>
+vmap <leader>crp :action StringManipulation.ToPascalCase<CR>
+vmap <leader>cri :action osmedile.intellij.stringmanip.SwapCaseAction<CR>
+
 
 if has('ide')
     if &ide =~? 'Android Studio'
