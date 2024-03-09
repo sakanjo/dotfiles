@@ -16,3 +16,4 @@ set -gx FZF_OPEN_COMMAND 'rg --files --no-require-git --hidden -g "!.git" --sort
 set -gx FZF_FIND_FILE_COMMAND $FZF_OPEN_COMMAND
 set -gx FZF_CD_COMMAND 'fd --type d --ignore-file ~/.gitignore'
 set -gx FZF_CD_WITH_HIDDEN_COMMAND 'fd --type d --ignore-file ~/.gitignore --exclude ".git" --hidden'
+set -gx FZF_COMPLETE 2
