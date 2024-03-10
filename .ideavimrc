@@ -279,6 +279,7 @@ vmap <leader>crl :action osmedile.intellij.stringmanip.tolowercaseaction<cr>
 vmap <leader>crp :action StringManipulation.ToPascalCase<CR>
 vmap <leader>cri :action osmedile.intellij.stringmanip.SwapCaseAction<CR>
 
+nmap <leader>cn <Action>(ClearAllNotifications)
 
 if has('ide')
     if &ide =~? 'Android Studio'
