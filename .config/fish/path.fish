@@ -16,6 +16,8 @@ end
 
 # Cargo
 set -gx PATH ~/.cargo/bin $PATH
+set -gx PATH debug $PATH
+set -gx PATH release $PATH
 
 # Flutter
 set -gx PATH ~/.local/flutter/bin $PATH
