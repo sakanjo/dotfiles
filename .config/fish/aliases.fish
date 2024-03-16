@@ -75,6 +75,7 @@ alias co 'composer'
 alias coi 'co install'
 alias cou 'co update'
 alias cor 'co require'
+alias cord 'co require --dev'
 
 # howdoi
 alias howto 'howdoi -c -n 5 how to'
