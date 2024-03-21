@@ -108,9 +108,10 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-bar {
-        status_command i3status
-}
+# Uncomment to show bar
+# bar {
+#         status_command i3status
+# }
 
 # Screen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
@@ -136,3 +137,27 @@ bindsym $mod+Shift+g mode "$mode_gaps"
 
 # Picom
 exec --no-startup-id picom --config ~/.config/picom/picom.conf -b
+
+# Window border bar
+default_border none
+default_floating_border none
+
+# Hit same workspace num
+workspace_auto_back_and_forth yes
+
+# shutdown / restart / suspend...
+set $mode_system System (l) lock, (e) logout, (r) reboot, (CTRL+s) shutdown
+
+mode "$mode_system" {
+    bindsym l exec --no-startup-id $i3lockwall, mode "default"
+    bindsym e exec --no-startup-id i3-msg exit, mode "default"
+    bindsym r exec --no-startup-id systemctl reboot, mode "default"
+    bindsym Ctrl+s exec --no-startup-id systemctl poweroff -i, mode "default"
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+BackSpace mode "$mode_system"
+
+smart_borders no_gaps
