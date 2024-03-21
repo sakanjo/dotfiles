@@ -1,5 +1,5 @@
 set $mod Mod4
-font pango:monospace 8
+font pango:Droid Sans Mono 9
 
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
@@ -109,9 +109,14 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Uncomment to show bar
-# bar {
-#         status_command i3status
-# }
+bar {
+        font pango:Droid Sans Mono 8
+
+        status_command i3blocks
+        i3bar_command i3bar --transparency
+}
+
+bindsym $mod+b bar mode toggle
 
 # Screen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
