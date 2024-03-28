@@ -1,5 +1,6 @@
 # Local
 set -gx PATH ~/.local/bin $PATH
+set -gx PATH bin $PATH
 
 # NodeJs
 set -gx PATH node_modules/.bin $PATH
