@@ -76,6 +76,7 @@ alias coi 'co install'
 alias cou 'co update'
 alias cor 'co require'
 alias cord 'co require --dev'
+alias cot 'co test'
 
 # howdoi
 alias howto 'howdoi -c -n 5 how to'
@@ -103,6 +104,9 @@ alias cr 'cargo run -q'
 
 # Docker
 alias d 'docker'
+
+# Eqo
+alias lt 'eqo listen -cq'
 
 # Others
 alias dl 'cd ~/Downloads'
