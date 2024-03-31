@@ -12,7 +12,7 @@ set -gx PATH ~/.config/composer/vendor/bin $PATH
 # PNPM
 set -gx PNPM_HOME ~/.local/share/pnpm
 if not string match -q -- $PNPM_HOME $PATH
-  set -gx PATH "$PNPM_HOME" $PATH
+    set -gx PATH "$PNPM_HOME" $PATH
 end
 
 # Cargo
@@ -35,5 +35,5 @@ set -gx PATH ~/.bun/bin $PATH
 
 # Yarn
 if type -q yarn
-	set -gx PATH (yarn global bin) $PATH
+    set -gx PATH (yarn global bin) $PATH
 end

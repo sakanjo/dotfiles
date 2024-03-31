@@ -1,5 +1,5 @@
 # npm
-alias n 'pnpm'
+alias n pnpm
 alias ni 'n install'
 alias nr 'n run'
 alias nid 'ni -D'
@@ -33,19 +33,19 @@ alias arl 'a route:list'
 alias sail '[ -f sail ] && bash sail || bash vendor/bin/sail'
 
 # Python
-alias py 'python3'
+alias py python
 
 alias ve 'py -m venv ./venv'
 alias va '. ./venv/bin/activate.fish'
-alias vd 'deactivate'
+alias vd deactivate
 
-alias pi 'pip3 install'
-alias pir 'pip3 install -r requirements.txt'
-alias pird 'pip3 install -r requirements-dev.txt'
-alias pie 'pip3 install -e .'
+alias pi 'pip install'
+alias pir 'pi -r requirements.txt'
+alias pird 'pi -r requirements-dev.txt'
+alias pie 'pi -e .'
 
 # Git
-alias g 'git'
+alias g git
 alias gi 'g init'
 alias gd 'g diff'
 alias gdc 'gd --cached'
@@ -71,18 +71,17 @@ alias ghb 'gh browse'
 alias ghi 'gh issue'
 
 # Composer
-alias co 'composer'
+alias co composer
 alias coi 'co install'
 alias cou 'co update'
 alias cor 'co require'
-alias cord 'co require --dev'
 alias cot 'co test'
 
 # howdoi
 alias howto 'howdoi -c -n 5 how to'
 
 # Gradle
-alias gr 'gradle'
+alias gr gradle
 alias gw './gradlew'
 
 # Git-extras
@@ -91,19 +90,19 @@ alias root 'cd (g root)'
 # Exa
 alias ls 'exa -g --icons'
 alias ll 'ls -la'
-alias l 'll'
+alias l ll
 
 # Vim
-alias v 'nvim'
+alias v nvim
 alias vim 'nvim --clean'
 
 # Cargo
-alias c 'cargo'
+alias c cargo
 alias cb 'cargo build -q'
 alias cr 'cargo run -q'
 
 # Docker
-alias d 'docker'
+alias d docker
 
 # Eqo
 alias lt 'eqo listen -cq'
@@ -116,11 +115,11 @@ alias paths 'string split : $PATH'
 
 alias unset 'set -e'
 
-alias mux 'tmuxinator'
+alias mux tmuxinator
 alias myip 'curl ifconfig.me'
 alias weather 'curl wttr.in'
 
-alias cls 'clear'
+alias cls clear
 
 alias i 'sudo apt install -y'
 alias r 'sudo apt remove -y'

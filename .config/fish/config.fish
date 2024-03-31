@@ -3,8 +3,8 @@ source ~/.config/fish/aliases.fish
 source ~/.config/fish/functions.fish
 source ~/.config/fish/extra.fish
 
-if test -e "$HOME/.extra.fish";
-	source ~/.extra.fish
+if test -e "$HOME/.extra.fish"
+    source ~/.extra.fish
 end
 
 set -gx fish_greeting
