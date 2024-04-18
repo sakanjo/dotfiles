@@ -1,6 +1,7 @@
 # npm
 alias n pnpm
 alias ni 'n install'
+alias nci 'n ci'
 alias nr 'n run'
 alias nid 'ni -D'
 alias nig 'ni -g'
@@ -75,6 +76,7 @@ alias co composer
 alias coi 'co install'
 alias cou 'co update'
 alias cor 'co require'
+alias cord 'co require --dev'
 alias cot 'co test'
 
 # howdoi
@@ -106,6 +108,12 @@ alias d docker
 
 # Eqo
 alias lt 'eqo listen -cq'
+
+# Tput
+
+alias cols 'tput cols'
+alias lines 'tput lines'
+alias rows 'tput lines'
 
 # Others
 alias dl 'cd ~/Downloads'
