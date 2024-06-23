@@ -72,3 +72,4 @@ nmap \nf :vsc AddQuickFile<CR>
 nmap \nc :vsc Project.AddClass<CR>
 
 nmap <S-k> :vsc Edit.QuickInfo<CR>
+nmap \sa :vsc File.SaveAll<CR>
