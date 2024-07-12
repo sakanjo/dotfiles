@@ -6,6 +6,7 @@ set clipboard=unnamed
 set scrolloff=6
 set timeoutlen=5000
 set relativenumber
+set number
 
 nmap ge :vsc View.NextError<CR>
 nmap gE :vsc View.PreviousError<CR>
@@ -80,4 +81,19 @@ nmap <C-S-j> i<Esc>"ryy"rp`^j
 vmap <C-S-j> "ry`<k"rpgv
 
 nmap yae :%y<CR>
+nmap vae ggVG
+nmap dae ggVGd
 
+nmap \pp :vsc Project.Properties<CR>
+nmap gcip vip :vsc Edit.ToggleLineComment<CR><ESC>k
+
+nmap \ra :vsc Debug.StartWithoutDebugging<CR>
+nmap \rd :vsc Debug.Start<CR>
+nmap \rb :vsc Build.BuildSolution<CR>
+nmap \rr :vsc Build.RebuildSolution<CR>
+nmap \rc :vsc Build.CleanSolution<CR>
+
+nmap d[ V{"_d
+nmap d] V}"_d
+
+nmap \db V$%"_d
