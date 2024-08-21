@@ -39,7 +39,7 @@ alias ve 'py -m venv ./venv'
 alias va '. ./venv/bin/activate.fish'
 alias vd deactivate
 
-alias pi 'pip install'
+alias pi 'pip install -U'
 alias pir 'pi -r requirements.txt'
 alias pird 'pi -r requirements-dev.txt'
 alias pie 'pi -e .'
