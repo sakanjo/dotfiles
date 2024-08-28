@@ -97,3 +97,11 @@ nmap d[ V{"_d
 nmap d] V}"_d
 
 nmap \db V$%"_d
+imap <A-k> <esc>maA;<esc>`aa
+imap <A-j> <esc>A;<esc>o
+
+nmap \ve :vsc View.ErrorList<CR>
+nmap \ad :vsc SolutionExplorer.SyncWithActiveDocument<CR>
+
+nmap <A-a> ggO<Esc>O
+nmap <C-a> gg}O
