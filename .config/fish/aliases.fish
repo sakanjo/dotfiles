@@ -31,7 +31,6 @@ alias at 'a tinker'
 alias ah 'a ide-helper:generate && a ide-helper:models -NR && a ide-helper:meta && a ide-helper:eloquent'
 alias aqw 'a queue:work'
 alias arl 'a route:list'
-alias sail '[ -f sail ] && bash sail || bash vendor/bin/sail'
 
 # Python
 alias py python
