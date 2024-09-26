@@ -11,18 +11,26 @@ function .....
     cd ../../../..
 end
 
+function e --description 'exit on finish'
+    eval $argv
+
+    if test $status -eq 0
+        exit
+    end
+end
+
 function backup --description 'backup current dir'
     set format (basename (pwd))-(date +%Y-%m-%d.%H:%M:%S)
     tar -zcvf ../$format.tar.gz ../(basename (pwd))/ 1>/dev/null 2>&1
 end
 
-function beep --description "make two beeps"
+function beep --description 'make two beeps'
     echo -e '\a'
     sleep 0.1
     echo -e '\a'
 end
 
-function rn --description "rename current dir"
+function rn --description 'rename current dir'
     set new_name $argv[1]
     set current_dir (pwd)
     cd ..
