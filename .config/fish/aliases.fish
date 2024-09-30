@@ -40,9 +40,13 @@ alias va '. ./venv/bin/activate.fish'
 alias vd deactivate
 
 alias pi 'pip install -U'
+alias piu 'pip uninstall'
 alias pir 'pi -r requirements.txt'
 alias pird 'pi -r requirements-dev.txt'
 alias pie 'pi -e .'
+
+alias pix 'pipx install'
+alias pixu 'pipx uninstall'
 
 # Git
 alias g git
