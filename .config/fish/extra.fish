@@ -13,3 +13,7 @@ end
 if type -q oh-my-posh && test -f ~/.theme.omp.json
     oh-my-posh init fish --config ~/.theme.omp.json | source
 end
+
+if type -q fnm
+    fnm env --use-on-cd --shell fish | source
+end
