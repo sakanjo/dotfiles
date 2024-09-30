@@ -22,7 +22,8 @@
 - [Exa](https://github.com/ogham/exa) - `ls` replacement
 - [fd](https://github.com/sharkdp/fd) - A simple, fast and user-friendly alternative to 'find'
 - [ripgrep](https://github.com/BurntSushi/ripgrep) - Faster grep
-- [fzf](https://github.com/jethrokuan/fzf) - Interactive filtering
+- [fzf-fish](https://github.com/jethrokuan/fzf) - fish keybindings for fzf
+- [fzf](https://github.com/junegunn/fzf) - A command-line fuzzy finder
 - [fkill](https://github.com/sindresorhus/fkill) - Fabulously kill processes
 - [bat](https://github.com/sharkdp/bat) - Improved cat
 - [Nerd fonts](https://github.com/ryanoasis/nerd-fonts) - I use `Hack`
