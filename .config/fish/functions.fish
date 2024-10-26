@@ -106,7 +106,6 @@ function fish_user_key_bindings
     bind ! bind_bang
     bind '$' bind_dollar
 
-    bind \ee ranger
-    bind \e\cE lf
+    bind \ee yazi
     bind \cZ zi
 end
