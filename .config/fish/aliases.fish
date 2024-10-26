@@ -133,7 +133,7 @@ alias weather 'curl wttr.in'
 alias cls clear
 
 alias i 'sudo apt install -y'
-alias r 'sudo apt remove -y'
+alias r 'sudo apt remove --purge -y'
 
 alias pbcopy 'xsel --clipboard --input'
 alias pbpaste 'xsel --clipboard --output'
