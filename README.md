@@ -19,7 +19,7 @@
 - [Fish shell](https://fishshell.com/)
 - [Fisher](https://github.com/jorgebucaran/fisher) - Plugin manager
 - [z](https://github.com/ajeetdsouza/zoxide) - Directory jumping
-- [Exa](https://github.com/ogham/exa) - `ls` replacement
+- [Eza](https://github.com/eza-community/eza) - A modern alternative to ls
 - [fd](https://github.com/sharkdp/fd) - A simple, fast and user-friendly alternative to 'find'
 - [ripgrep](https://github.com/BurntSushi/ripgrep) - Faster grep
 - [fzf-fish](https://github.com/jethrokuan/fzf) - fish keybindings for fzf

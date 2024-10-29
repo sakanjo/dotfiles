@@ -92,8 +92,8 @@ alias gw './gradlew'
 # Git-extras
 alias root 'cd (g root)'
 
-# Exa
-alias ls 'exa -g --icons'
+# Eza
+alias ls 'eza -g --icons'
 alias ll 'ls -la'
 alias l ll
 
