@@ -1,0 +1,9 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/jesseduffield/lazygit/master/schema/config.json
+
+gui:
+  scrollHeight: 1
+  skipDiscardChangeWarning: true
+  skipStashWarning: true
+  skipNoStagedFilesWarning: true
+  skipRewordInEditorWarning: true
+  showBottomLine: false
