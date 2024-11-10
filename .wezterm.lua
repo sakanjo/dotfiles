@@ -55,6 +55,7 @@ config.keys = {
   { key = '\\',  mods = 'LEADER',      action = action.SplitHorizontal },
 
   { key = 'F11', mods = nil,           action = action.ToggleFullScreen },
+  { key = 'z',   mods = 'LEADER',      action = action.TogglePaneZoomState },
 
   { key = 'x',   mods = 'LEADER',      action = action.CloseCurrentPane { confirm = true } },
   { key = 'p',   mods = 'LEADER',      action = action.PaneSelect { alphabet = '1234567890' } },
