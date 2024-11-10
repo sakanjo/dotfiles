@@ -57,6 +57,7 @@ config.keys = {
   { key = 'F11', mods = nil,           action = action.ToggleFullScreen },
   { key = 'z',   mods = 'LEADER',      action = action.TogglePaneZoomState },
 
+  { key = 'c',   mods = 'LEADER',      action = action.SpawnTab 'CurrentPaneDomain' },
   { key = 'x',   mods = 'LEADER',      action = action.CloseCurrentPane { confirm = true } },
   { key = 'p',   mods = 'LEADER',      action = action.PaneSelect { alphabet = '1234567890' } },
   { key = 's',   mods = 'LEADER',      action = action.QuickSelect },
