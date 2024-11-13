@@ -17,3 +17,7 @@ end
 if type -q fnm
     fnm env --use-on-cd --shell fish | source
 end
+
+if type -q starship
+    starship init fish | source
+end
