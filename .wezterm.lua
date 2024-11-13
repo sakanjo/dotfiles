@@ -51,26 +51,36 @@ config.hide_tab_bar_if_only_one_tab = true
 config.tab_bar_at_bottom = true
 
 config.keys = {
-  { key = '-',   mods = 'LEADER',      action = action.SplitVertical },
-  { key = '\\',  mods = 'LEADER',      action = action.SplitHorizontal },
+  { key = '-',          mods = 'LEADER',      action = action.SplitVertical },
+  { key = '\\',         mods = 'LEADER',      action = action.SplitHorizontal },
 
-  { key = 'F11', mods = nil,           action = action.ToggleFullScreen },
-  { key = 'z',   mods = 'LEADER',      action = action.TogglePaneZoomState },
+  { key = 'F11',        mods = nil,           action = action.ToggleFullScreen },
+  { key = 'z',          mods = 'LEADER',      action = action.TogglePaneZoomState },
 
-  { key = 'c',   mods = 'LEADER',      action = action.SpawnTab 'CurrentPaneDomain' },
-  { key = 'x',   mods = 'LEADER',      action = action.CloseCurrentPane { confirm = true } },
-  { key = 'p',   mods = 'LEADER',      action = action.PaneSelect { alphabet = '1234567890' } },
-  { key = 's',   mods = 'LEADER',      action = action.QuickSelect },
+  { key = 'LeftArrow',  mods = 'CTRL|SHIFT',  action = action.MoveTabRelative(-1) },
+  { key = 'RightArrow', mods = 'CTRL|SHIFT',  action = action.MoveTabRelative(1) },
 
-  { key = 'h',   mods = 'LEADER|CTRL', action = action.AdjustPaneSize { 'Left', 5 } },
-  { key = 'l',   mods = 'LEADER|CTRL', action = action.AdjustPaneSize { 'Right', 5 } },
-  { key = 'k',   mods = 'LEADER|CTRL', action = action.AdjustPaneSize { 'Up', 5 } },
-  { key = 'j',   mods = 'LEADER|CTRL', action = action.AdjustPaneSize { 'Down', 5 } },
+  { key = 'c',          mods = 'LEADER',      action = action.SpawnTab 'CurrentPaneDomain' },
+  { key = 'x',          mods = 'LEADER',      action = action.CloseCurrentPane { confirm = true } },
+  { key = 's',          mods = 'LEADER',      action = action.PaneSelect { alphabet = '1234567890' } },
+  { key = ' ',          mods = 'LEADER',      action = action.QuickSelect },
 
-  { key = 'h',   mods = 'LEADER',      action = action.ActivatePaneDirection 'Left' },
-  { key = 'l',   mods = 'LEADER',      action = action.ActivatePaneDirection 'Right' },
-  { key = 'k',   mods = 'LEADER',      action = action.ActivatePaneDirection 'Up' },
-  { key = 'j',   mods = 'LEADER',      action = action.ActivatePaneDirection 'Down' },
+  { key = 'h',          mods = 'LEADER|CTRL', action = action.AdjustPaneSize { 'Left', 5 } },
+  { key = 'l',          mods = 'LEADER|CTRL', action = action.AdjustPaneSize { 'Right', 5 } },
+  { key = 'k',          mods = 'LEADER|CTRL', action = action.AdjustPaneSize { 'Up', 5 } },
+  { key = 'j',          mods = 'LEADER|CTRL', action = action.AdjustPaneSize { 'Down', 5 } },
+
+  { key = 'h',          mods = 'LEADER',      action = action.ActivatePaneDirection 'Left' },
+  { key = 'l',          mods = 'LEADER',      action = action.ActivatePaneDirection 'Right' },
+  { key = 'k',          mods = 'LEADER',      action = action.ActivatePaneDirection 'Up' },
+  { key = 'j',          mods = 'LEADER',      action = action.ActivatePaneDirection 'Down' },
+  -- {
+  --   key = 'j',
+  --   mods = 'LEADER',
+  --   action = wezterm.action_callback(function(window, panel) -- check if zoomed
+  --     action.ActivatePaneDirection('Down')
+  --   end)
+  -- },
 }
 
 config.key_tables = {}
