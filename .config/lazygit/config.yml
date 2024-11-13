@@ -1,7 +1,9 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/jesseduffield/lazygit/master/schema/config.json
 
+promptToReturnFromSubprocess: false
+
 gui:
-  scrollHeight: 1
+  scrollHeight: 2
   skipDiscardChangeWarning: true
   skipStashWarning: true
   skipNoStagedFilesWarning: true
