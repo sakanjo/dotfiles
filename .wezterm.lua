@@ -11,31 +11,30 @@ wezterm.on("gui-startup", function()
   gui_window:perform_action(action.ToggleFullScreen, pane)
 end)
 
-config.font = wezterm.font({ family = "JetBrains Mono Regular", weight = "Regular" })
-config.font_size = 12
+config.font = wezterm.font({ family = "JetBrains Mono", weight = "Medium" })
+config.font_size = 13
 config.font_rules = {
   {
     intensity = "Bold",
     italic = false,
-    font = wezterm.font({ family = "JetBrains Mono Bold", weight = "Bold", italic = false }),
+    font = wezterm.font({ family = "JetBrains Mono", weight = "Bold", italic = false }),
   },
   {
     intensity = "Normal",
     italic = true,
-    font = wezterm.font({ family = "JetBrains Mono Italic", weight = 'Regular', italic = true }),
+    font = wezterm.font({ family = "JetBrains Mono", weight = "Medium", italic = true }),
   },
   {
     intensity = "Bold",
     italic = true,
-    font = wezterm.font({ family = "JetBrains Mono Bold Italic", weight = "Bold", italic = true }),
+    font = wezterm.font({ family = "JetBrains Mono", weight = "Bold", italic = true }),
   }
 }
 
 config.leader = { key = 'q', mods = 'CTRL', timeout_milliseconds = 1000 }
 
+config.default_prog = { 'zellij' }
 config.color_scheme = 'ayu'
-config.default_prog = { '/usr/bin/fish', '-l' }
-
 config.default_cursor_style = 'BlinkingBar'
 config.animation_fps = 1
 config.line_height = 1.25
