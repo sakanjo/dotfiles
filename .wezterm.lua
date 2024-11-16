@@ -31,9 +31,8 @@ config.font_rules = {
   }
 }
 
-config.leader = { key = 'q', mods = 'CTRL', timeout_milliseconds = 1000 }
+config.leader = { key = 'q', mods = 'ALT', timeout_milliseconds = 1000 }
 
-config.default_prog = { 'zellij' }
 config.color_scheme = 'ayu'
 config.default_cursor_style = 'BlinkingBar'
 config.animation_fps = 1
@@ -50,29 +49,29 @@ config.hide_tab_bar_if_only_one_tab = true
 config.tab_bar_at_bottom = true
 
 config.keys = {
-  { key = '-',          mods = 'LEADER',      action = action.SplitVertical },
-  { key = '\\',         mods = 'LEADER',      action = action.SplitHorizontal },
+  { key = '-',          mods = 'LEADER',     action = action.SplitVertical },
+  { key = '\\',         mods = 'LEADER',     action = action.SplitHorizontal },
 
-  { key = 'F11',        mods = nil,           action = action.ToggleFullScreen },
-  { key = 'z',          mods = 'LEADER',      action = action.TogglePaneZoomState },
+  { key = 'F11',        mods = nil,          action = action.ToggleFullScreen },
+  { key = 'z',          mods = 'LEADER',     action = action.TogglePaneZoomState },
 
-  { key = 'LeftArrow',  mods = 'CTRL|SHIFT',  action = action.MoveTabRelative(-1) },
-  { key = 'RightArrow', mods = 'CTRL|SHIFT',  action = action.MoveTabRelative(1) },
+  { key = 'LeftArrow',  mods = 'ALT|SHIFT',  action = action.MoveTabRelative(-1) },
+  { key = 'RightArrow', mods = 'ALT|SHIFT',  action = action.MoveTabRelative(1) },
 
-  { key = 'c',          mods = 'LEADER',      action = action.SpawnTab 'CurrentPaneDomain' },
-  { key = 'x',          mods = 'LEADER',      action = action.CloseCurrentPane { confirm = true } },
-  { key = 's',          mods = 'LEADER',      action = action.PaneSelect { alphabet = '1234567890' } },
-  { key = ' ',          mods = 'LEADER',      action = action.QuickSelect },
+  { key = 'c',          mods = 'LEADER',     action = action.SpawnTab 'CurrentPaneDomain' },
+  { key = 'x',          mods = 'LEADER',     action = action.CloseCurrentPane { confirm = true } },
+  { key = 's',          mods = 'LEADER',     action = action.PaneSelect { alphabet = '1234567890' } },
+  { key = ' ',          mods = 'LEADER',     action = action.QuickSelect },
 
-  { key = 'h',          mods = 'LEADER|CTRL', action = action.AdjustPaneSize { 'Left', 5 } },
-  { key = 'l',          mods = 'LEADER|CTRL', action = action.AdjustPaneSize { 'Right', 5 } },
-  { key = 'k',          mods = 'LEADER|CTRL', action = action.AdjustPaneSize { 'Up', 5 } },
-  { key = 'j',          mods = 'LEADER|CTRL', action = action.AdjustPaneSize { 'Down', 5 } },
+  { key = 'h',          mods = 'LEADER|ALT', action = action.AdjustPaneSize { 'Left', 5 } },
+  { key = 'l',          mods = 'LEADER|ALT', action = action.AdjustPaneSize { 'Right', 5 } },
+  { key = 'k',          mods = 'LEADER|ALT', action = action.AdjustPaneSize { 'Up', 5 } },
+  { key = 'j',          mods = 'LEADER|ALT', action = action.AdjustPaneSize { 'Down', 5 } },
 
-  { key = 'h',          mods = 'LEADER',      action = action.ActivatePaneDirection 'Left' },
-  { key = 'l',          mods = 'LEADER',      action = action.ActivatePaneDirection 'Right' },
-  { key = 'k',          mods = 'LEADER',      action = action.ActivatePaneDirection 'Up' },
-  { key = 'j',          mods = 'LEADER',      action = action.ActivatePaneDirection 'Down' },
+  { key = 'h',          mods = 'LEADER',     action = action.ActivatePaneDirection 'Left' },
+  { key = 'l',          mods = 'LEADER',     action = action.ActivatePaneDirection 'Right' },
+  { key = 'k',          mods = 'LEADER',     action = action.ActivatePaneDirection 'Up' },
+  { key = 'j',          mods = 'LEADER',     action = action.ActivatePaneDirection 'Down' },
   -- {
   --   key = 'j',
   --   mods = 'LEADER',
