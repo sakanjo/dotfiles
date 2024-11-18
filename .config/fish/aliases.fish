@@ -1,26 +1,21 @@
 # npm
 alias n pnpm
+
 alias ni 'n install'
-alias nci 'n ci'
 alias nr 'n run'
 alias nid 'ni -D'
 alias nig 'ni -g'
-alias nrc 'nr check'
 alias nrd 'nr dev'
-alias nrp 'nr preview'
 alias nrb 'nr build'
 alias nrs 'nr start'
-alias nrt 'nr test'
-alias nrtw 'nr test:watch'
-alias nrw 'nr watch'
 
 # Laravel
 alias a 'php artisan'
+
 alias as 'a serve'
 alias akg 'a key:generate'
 alias am 'a migrate'
 alias ads 'a db:seed'
-alias adw 'a db:wipe'
 alias amm 'a make:model -m'
 alias amc 'a make:controller'
 alias ams 'a make:seeder'
@@ -35,14 +30,13 @@ alias arl 'a route:list'
 # Python
 alias py python
 
-alias ve 'py -m venv ./venv'
-alias va '. ./venv/bin/activate.fish'
-alias vd deactivate
+alias venv 'py -m venv ./venv'
+alias vact '. ./venv/bin/activate.fish'
+alias vdea deactivate
 
 alias pi 'pip install -U'
 alias piu 'pip uninstall'
 alias pir 'pi -r requirements.txt'
-alias pird 'pi -r requirements-dev.txt'
 alias pie 'pi -e .'
 
 alias pix 'pipx install'
@@ -50,32 +44,20 @@ alias pixu 'pipx uninstall'
 
 # Git
 alias g git
-alias gi 'g init'
-alias gd 'g diff'
-alias gdc 'gd --cached'
-alias ga 'g add'
-alias gst 'g status'
-alias gbr 'g branch'
-alias gp 'g push'
-alias gpl 'g pull'
+
+alias gdc 'g diff --cached'
 alias gpr 'g pull --rebase'
 alias grch 'g reset --hard && g clean -fd'
-alias gci 'g commit'
-alias gco 'g checkout'
 alias main 'g checkout main'
 alias master 'g checkout master'
-alias czps 'cz && g ps'
-alias gpa 'ga . && czps'
 
 # Gh
 alias ghr 'gh repo'
 alias ghin 'g init -q && g add . && g commit -m "First commit" && gh repo create -s . --push'
-alias gha 'gh auth'
-alias ghb 'gh browse'
-alias ghi 'gh issue'
 
 # Composer
 alias co composer
+
 alias coi 'co install'
 alias cou 'co update'
 alias cor 'co require'
@@ -134,14 +116,13 @@ alias cls clear
 
 alias i 'sudo apt install -y'
 alias r 'sudo apt remove --purge -y'
+alias u 'sudo apt update'
 
 alias pbcopy 'xsel --clipboard --input'
 alias pbpaste 'xsel --clipboard --output'
 
 alias cpu 'ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%mem | head'
-alias repos 'grep ^[^#] /etc/apt/sources.list /etc/apt/sources.list.d/*'
+alias repos 'rg ^[^#] --colors "match:none" /etc/apt/sources.list /etc/apt/sources.list.d/*.list'
 
 alias chmox 'chmod +x'
 alias hosts 'sudo $EDITOR /etc/hosts'
-
-alias duh 'du -sh * | sort -h'
