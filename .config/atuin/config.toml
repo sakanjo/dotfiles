@@ -1,0 +1,6 @@
+show_help = false
+show_tabs = false
+scroll_exits = false
+
+[sync]
+records = true
