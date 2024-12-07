@@ -118,4 +118,5 @@ function fish_user_key_bindings
     bind \ee _yazi
     bind \cZ zi
     bind \eg lazygit
+    bind \ed lazydocker
 end
