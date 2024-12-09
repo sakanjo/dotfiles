@@ -95,10 +95,12 @@ alias d docker
 alias lt 'eqo listen -cq'
 
 # Tput
-
 alias cols 'tput cols'
 alias lines 'tput lines'
 alias rows 'tput lines'
+
+# Terraform
+alias tf terraform
 
 # Others
 alias dl 'cd ~/Downloads'
