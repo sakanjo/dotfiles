@@ -10,7 +10,7 @@ set sidescrolloff=6
 set scrolljump=6
 set timeoutlen=5000
 set clipboard^=unnamedplus
-set relativenumbers
+set relativenumber
 
 " Plugins
 set ideastrictmode
@@ -39,8 +39,8 @@ nmap gE <Action>(GotoPreviousError)
 nmap <CR> o<Esc>O
 nmap <A-c> \"_ciw
 
-nmap <C-j> <Action>(PreviousTab)
-nmap <C-k> <Action>(NextTab)
+nmap <Tab> <Action>(NextTab)
+nmap <S-Tab> <Action>(PreviousTab)
 
 nmap <C-h> <Action>(MethodUp)
 nmap <C-l> <Action>(MethodDown)
@@ -103,8 +103,8 @@ nmap <leader>fu <Action>(FindUsages)
 
 nmap <leader>gc <Action>(GotoClass)
 nmap gi <Action>(GotoImplementation)
-nmap gd <Action>(GotoTypeDeclaration)
-nmap gD <Action>(GotoDeclaration)
+nmap gD <Action>(GotoTypeDeclaration)
+nmap gd <Action>(GotoDeclaration)
 nmap gsm <Action>(GotoSuperMethod)
 nmap gt <Action>(GotoTest)
 nmap gb <Action>(Back)
@@ -145,7 +145,7 @@ xmap <A-d> "_dd
 vmap <A-d> "_d
 
 nmap <C-a> gg
-nmap <C-p> <Action>(GotoFile)
+nmap <leader>ff <Action>(GotoFile)
 imap <C-l> <Action>(copilot.applyInlays)
 
 nmap <S-A-j> <Action>(EditorCloneCaretBelow)
@@ -158,7 +158,7 @@ nmap <C-s> <Action>(SaveDocument)
 
 nmap <leader>pc <Action>(CheckinProject)
 nmap <leader>of <Action>(SelectInProjectView)
-nmap <leader>lg <Action>(FindInPath)
+nmap <leader>fw <Action>(FindInPath)
 
 map <A-w> ysiw)i
 vmap <A-y> <Action>($Copy)<Esc>
@@ -205,12 +205,14 @@ noremap c "_c
 
 noremap s "_s
 noremap x "_x
+noremap S "_S
 
 nmap d] V}"_d
 nmap d[ V{"_d
 
+nmap <leader>d "_d
+
 nmap <leader>dat dat"_dd
-nmap <leader>dap "_dap
 
 nmap <leader>db V$%"_d
 nmap <leader>cb V$%"_c
@@ -218,17 +220,10 @@ nmap <leader>cb V$%"_c
 nmap <leader>S "_S
 nmap <leader>C "_C
 
-nmap <leader>dii "_dii
-nmap <leader>cii "_cii
-
 nmap <leader>di( "_di(
 nmap <leader>di) "_di)
 
-nmap <leader>ci( "_ci(
-nmap <leader>ci) "_ci)
-
-nmap <leader>dia "_dia
-nmap <leader>daa "_daa
+nmap <leader>rr *N"_cgn
 
 " Comment
 
