@@ -15,7 +15,7 @@ if type -q oh-my-posh && test -f ~/.theme.omp.json
 end
 
 if type -q fnm
-    fnm env --use-on-cd --shell fish | source
+    fnm env --shell fish | source
 end
 
 if type -q starship
