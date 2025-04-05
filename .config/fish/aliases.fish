@@ -14,12 +14,7 @@ alias a 'php artisan'
 
 alias as 'a serve'
 alias akg 'a key:generate'
-alias am 'a migrate'
 alias ads 'a db:seed'
-alias amm 'a make:model -m'
-alias amc 'a make:controller'
-alias ams 'a make:seeder'
-alias amt 'a make:test'
 alias amf 'a migrate:fresh'
 alias amfs 'a migrate:fresh --seed'
 alias at 'a tinker'
@@ -52,7 +47,6 @@ alias main 'g checkout main'
 alias master 'g checkout master'
 
 # Gh
-alias ghr 'gh repo'
 alias ghin 'g init -q && g add . && g commit -m "First commit" && gh repo create -s . --push'
 
 # Composer
@@ -91,6 +85,9 @@ alias cr 'cargo run -q'
 # Docker
 alias d docker
 
+# Podman
+alias p podman
+
 # Eqo
 alias lt 'eqo listen -cq'
 
@@ -103,6 +100,8 @@ alias rows 'tput lines'
 alias tf terraform
 
 # Others
+alias services 'systemctl list-unit-files --type=service'
+
 alias dl 'cd ~/Downloads'
 alias dt 'cd ~/Desktop'
 
