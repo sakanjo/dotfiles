@@ -127,3 +127,5 @@ alias repos 'rg ^[^#] --colors "match:none" /etc/apt/sources.list /etc/apt/sourc
 
 alias chmox 'chmod +x'
 alias hosts 'sudo $EDITOR /etc/hosts'
+
+alias cat-cert 'openssl x509 -text -noout -in'
