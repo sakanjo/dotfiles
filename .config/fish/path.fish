@@ -35,5 +35,5 @@ set -gx PATH ~/.bun/bin $PATH
 
 # Yarn
 if type -q yarn
-    set -gx PATH (yarn global bin) $PATH
+    set -gx PATH ~/.yarn/bin $PATH
 end
