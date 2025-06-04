@@ -120,6 +120,7 @@ nmap <leader>so :so ~/.ideavimrc<CR>
 nmap <leader>se :e ~/.ideavimrc<CR>
 
 map <leader>sw <Action>(SurroundWith)
+map <leader>ev <Action>(IntroduceVariable)
 map <leader>em <Action>(ExtractMethod)
 
 nmap <leader>vp <Action>(Vcs.QuickListPopupAction)
