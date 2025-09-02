@@ -115,8 +115,9 @@ function fish_user_key_bindings
     bind ! bind_bang
     bind '$' bind_dollar
 
-    bind \ee _yazi
-    bind \cZ zi
-    bind \eg lazygit
-    bind \eh lazydocker
+    bind alt-e _yazi
+    bind ctrl-z zi
+    bind alt-g lazygit
+    bind alt-h lazydocker
+    bind alt-H lazypodman
 end

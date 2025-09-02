@@ -84,9 +84,12 @@ alias cr 'cargo run -q'
 
 # Docker
 alias d docker
+alias d-ip 'docker inspect -f "{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}"'
 
 # Podman
 alias p podman
+alias p-ip 'podman inspect -f "{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}"'
+alias lazypodman 'DOCKER_HOST=unix:///var/run/user/1000/podman/podman.sock lazydocker'
 
 # Eqo
 alias lt 'eqo listen -cq'
@@ -129,3 +132,4 @@ alias chmox 'chmod +x'
 alias hosts 'sudo $EDITOR /etc/hosts'
 
 alias cat-cert 'openssl x509 -text -noout -in'
+alias certs 'awk -v cmd="openssl x509 -noout -subject" "/BEGIN/{close(cmd)};{print | cmd}" < /etc/ssl/certs/ca-certificates.crt'
