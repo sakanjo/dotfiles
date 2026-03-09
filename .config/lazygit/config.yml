@@ -1,7 +1,6 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/jesseduffield/lazygit/master/schema/config.json
 
 promptToReturnFromSubprocess: false
-
 gui:
   scrollHeight: 2
   skipDiscardChangeWarning: true
@@ -9,10 +8,9 @@ gui:
   skipNoStagedFilesWarning: true
   skipRewordInEditorWarning: true
   showBottomLine: false
-
 customCommands:
   - key: 'O'
     context: 'commitFiles'
     description: Open files in commit
     command: git show {{.SelectedCommit.Sha}}~1:{{.SelectedPath}} | $EDITOR
-    subprocess: true
+    output: terminal

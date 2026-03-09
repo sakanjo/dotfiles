@@ -58,9 +58,6 @@ alias cor 'co require'
 alias cord 'co require --dev'
 alias cot 'co test'
 
-# howdoi
-alias howto 'howdoi -c -n 5 how to'
-
 # Gradle
 alias gr gradle
 alias gw './gradlew'
@@ -114,13 +111,20 @@ alias unset 'set -e'
 
 alias mux tmuxinator
 alias myip 'curl ifconfig.me'
+alias myip4 'curl -4 ifconfig.me'
 alias weather 'curl wttr.in'
 
 alias cls clear
 
-alias i 'sudo apt install -y'
-alias r 'sudo apt remove --purge -y'
-alias u 'sudo apt update'
+if command -v apt >/dev/null
+    alias i "sudo apt install -y"
+    alias r "sudo apt remove --purge -y"
+    alias u "sudo apt update"
+else if command -v dnf >/dev/null
+    alias i "sudo dnf install -y"
+    alias r "sudo dnf remove -y"
+    alias u "sudo dnf check-update"
+end
 
 alias pbcopy 'xsel --clipboard --input'
 alias pbpaste 'xsel --clipboard --output'
@@ -133,3 +137,5 @@ alias hosts 'sudo $EDITOR /etc/hosts'
 
 alias cat-cert 'openssl x509 -text -noout -in'
 alias certs 'awk -v cmd="openssl x509 -noout -subject" "/BEGIN/{close(cmd)};{print | cmd}" < /etc/ssl/certs/ca-certificates.crt'
+
+alias rf 'rm -rf'

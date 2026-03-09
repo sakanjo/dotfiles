@@ -44,17 +44,9 @@ end
 
 function ghcl --description 'git clone from github and cd into it'
     if test -z $argv[2]
-        gh repo clone $argv && cd (basename $argv[1] .git)
+        gh repo clone $argv -- --depth 1 && cd (basename $argv[1] .git)
     else
-        gh repo clone $argv && cd $argv[2]
-    end
-end
-
-function gcl --description 'git clone and cd into it'
-    if test -z $argv[2]
-        g clone $argv && cd (basename $argv[1] .git)
-    else
-        g clone $argv && cd $argv[2]
+        gh repo clone $argv -- --depth 1 && cd $argv[2]
     end
 end
 
