@@ -7,7 +7,7 @@ set -gx PATH node_modules/.bin $PATH
 
 # Composer
 set -gx PATH vendor/bin $PATH
-set -gx PATH ~/.config/composer/vendor/bin $PATH
+set -gx PATH ~/.composer/vendor/bin $PATH
 
 # PNPM
 set -gx PNPM_HOME ~/.local/share/pnpm
