@@ -57,6 +57,8 @@ alias cou 'co update'
 alias cor 'co require'
 alias cord 'co require --dev'
 alias cot 'co test'
+alias coo 'co outdated -D'
+alias coa 'co audit'
 
 # Gradle
 alias gr gradle
@@ -138,4 +140,7 @@ alias hosts 'sudo $EDITOR /etc/hosts'
 alias cat-cert 'openssl x509 -text -noout -in'
 alias certs 'awk -v cmd="openssl x509 -noout -subject" "/BEGIN/{close(cmd)};{print | cmd}" < /etc/ssl/certs/ca-certificates.crt'
 
-alias rf 'rm -rf'
+alias rmf 'rm -rf'
+alias cpr 'cp -r'
+
+alias temp 'cd (mktemp -d)'
