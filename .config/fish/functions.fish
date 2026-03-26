@@ -20,7 +20,7 @@ function e --description 'exit on finish'
 end
 
 function backup --description 'backup current dir'
-    set format (basename (pwd))-(date +%Y-%m-%d.%H:%M:%S)
+    set format (basename (pwd))-(date +%Y-%m-%d.%H_%M_%S)
     tar -zcvf ../$format.tar.gz ../(basename (pwd))/ 1>/dev/null 2>&1
 end
 
