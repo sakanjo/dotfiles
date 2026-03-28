@@ -24,12 +24,12 @@ function x -d "Extract archives into a folder with the same basename"
     end
 
     for file in $argv
-        set name (basename "$file")
-        set dir (string replace -r '\.(tar\.gz|tgz|tar\.bz2|tbz2?|tar\.xz|txz|tar\.zst|tzst|tar\.lzma|tlz|tar\.lz|tar\.lz4|tar\.lzo|tar\.Z|taz|tar|7z|zip|gz|bz2?|xz|lzma|zst|lz4|Z)$' '' "$name")
+        set name (string lower (basename "$file"))
+        set dir (string replace -r '\.(tar\.gz|tgz|tar\.bz2|tbz2?|tar\.xz|txz|tar\.zst|tzst|tar\.lzma|tlz|tar\.lz|tar\.lz4|tar\.lzo|tar\.Z|taz|tar|7z|zip|gz|bz2?|xz|lzma|zst|lz4|Z|appimage)$' '' $name)
 
         mkdir -p "$dir"
 
-        switch $file
+        switch (string lower "$file")
             case '*.tar'
                 $tar xvf "$file" -C "$dir"
 
@@ -89,6 +89,16 @@ function x -d "Extract archives into a folder with the same basename"
 
             case '*.Z'
                 uncompress -c "$file" >"$dir/$dir"
+
+            case "*.appimage"
+                if not test -x "$file"
+                    echo >&2 "x: failed to extract '$file': file is not executable"
+                    return 1
+                end
+
+                cd "$dir"
+                ../"$file" --appimage-extract
+                cd ..
 
             case '*'
                 echo >&2 "x: failed to extract '$file': unsupported file type"
