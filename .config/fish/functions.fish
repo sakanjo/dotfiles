@@ -11,6 +11,97 @@ function .....
     cd ../../../..
 end
 
+function x -d "Extract archives into a folder with the same basename"
+    if test (count $argv) -lt 1
+        echo "usage: x FILE [FILE ...]"
+        return 1
+    end
+
+    if command -q gtar
+        set tar gtar
+    else
+        set tar tar
+    end
+
+    for file in $argv
+        set name (basename "$file")
+        set dir (string replace -r '\.(tar\.gz|tgz|tar\.bz2|tbz2?|tar\.xz|txz|tar\.zst|tzst|tar\.lzma|tlz|tar\.lz|tar\.lz4|tar\.lzo|tar\.Z|taz|tar|7z|zip|gz|bz2?|xz|lzma|zst|lz4|Z)$' '' "$name")
+
+        mkdir -p "$dir"
+
+        switch $file
+            case '*.tar'
+                $tar xvf "$file" -C "$dir"
+
+            case '*.tar.gz' '*.tgz'
+                $tar xvzf "$file" -C "$dir"
+
+            case '*.tar.bz2' '*.tar.bz' '*.tbz' '*.tbz2'
+                $tar xvjf "$file" -C "$dir"
+
+            case '*.tar.xz' '*.txz'
+                $tar xvJf "$file" -C "$dir"
+
+            case '*.tar.Z' '*.taz'
+                $tar xvZf "$file" -C "$dir"
+
+            case '*.tar.zst' '*.tzst'
+                $tar --zstd -xvf "$file" -C "$dir"
+
+            case '*.tar.lzma' '*.tar.zma' '*.tlz'
+                $tar --lzma -xvf "$file" -C "$dir"
+
+            case '*.tar.lrz'
+                lrzuntar "$file" "$dir"
+
+            case '*.tar.lz'
+                $tar --lzip -xvf "$file" -C "$dir"
+
+            case '*.tar.lz4'
+                $tar --use-compress-program=lz4 -xvf "$file" -C "$dir"
+
+            case '*.tar.lzo'
+                $tar --lzop -xvf "$file" -C "$dir"
+
+            case '*.7z' '*.iso'
+                7zz x "$file" -o"$dir"
+
+            case '*.zip' '*.xpi' '*.jar'
+                unzip "$file" -d "$dir"
+
+            case '*.gz'
+                gunzip -c "$file" >"$dir/$dir"
+
+            case '*.bz2' '*.bz'
+                bunzip2 -c "$file" >"$dir/$dir"
+
+            case '*.xz'
+                unxz -c "$file" >"$dir/$dir"
+
+            case '*.lzma'
+                unlzma -c "$file" >"$dir/$dir"
+
+            case '*.zst'
+                unzstd -c "$file" >"$dir/$dir"
+
+            case '*.lz4'
+                unlz4 -c "$file" >"$dir/$dir"
+
+            case '*.Z'
+                uncompress -c "$file" >"$dir/$dir"
+
+            case '*'
+                echo >&2 "x: failed to extract '$file': unsupported file type"
+                return 1
+        end
+
+        if test $status -ne 0
+            echo >&2 "Failed to extract '$file'"
+            return 1
+        end
+    end
+end
+
 function e --description 'exit on finish'
     eval $argv
 
