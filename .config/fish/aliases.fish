@@ -128,7 +128,7 @@ else if command -v dnf >/dev/null
     alias u "sudo dnf check-update"
 end
 
-alias pbcopy 'xsel --clipboard --input'
+alias pbcopy 'xsel --clipboard --input --trim'
 alias pbpaste 'xsel --clipboard --output'
 
 alias cpu 'ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%mem | head'
@@ -144,3 +144,4 @@ alias rmf 'rm -rf'
 alias cpr 'cp -r'
 
 alias temp 'cd (mktemp -d)'
+alias sudo 'sudo -s'

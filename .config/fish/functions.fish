@@ -112,6 +112,10 @@ function x -d "Extract archives into a folder with the same basename"
     end
 end
 
+function ipv4
+    ip route get 1.1.1.1 | awk '/src/{for(i=1;i<=NF;i++) if($i=="src") print $(i+1)}'
+end
+
 function e --description 'exit on finish'
     eval $argv
 
