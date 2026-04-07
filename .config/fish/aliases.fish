@@ -104,8 +104,11 @@ alias tf terraform
 # Others
 alias services 'systemctl list-unit-files --type=service'
 
+alias dh 'cd ~'
 alias dl 'cd ~/Downloads'
 alias dt 'cd ~/Desktop'
+alias dg 'cd ~/Gits'
+alias dt 'cd /tmp'
 
 alias paths 'string split : $PATH'
 
