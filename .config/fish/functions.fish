@@ -189,6 +189,14 @@ function pip-size --description 'show size of installed pip packages'
         | sort -hr
 end
 
+function vact --description 'activate virtual environment'
+    if test (count $argv) -gt 0
+        . $argv[1]/.venv/bin/activate.fish
+    else
+        . .venv/bin/activate.fish
+    end
+end
+
 function sudo!! --description 'sudo last command'
     eval sudo $history[1]
 end

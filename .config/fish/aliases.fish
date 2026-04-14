@@ -26,7 +26,6 @@ alias arl 'a route:list'
 alias py python
 
 alias venv 'py -m venv ./.venv'
-alias vact '. ./.venv/bin/activate.fish'
 alias vdea deactivate
 
 alias pi 'pip install -U'
