@@ -197,6 +197,17 @@ function vact --description 'activate virtual environment'
     end
 end
 
+function repo-size --description 'show size of github repo'
+    curl -s "https://api.github.com/repos/$argv" | jq -r '.size / 1024 | floor | tostring + " MB"'
+end
+
+function download-size --description 'show size of file to be downloaded'
+    set SIZE (curl -sI $argv[1] | grep -i content-length | awk '{print $2}' | tr -d '\r')
+    set MB (math --scale=0 "$SIZE / 1024 / 1024")
+
+    echo "$MB MB"
+end
+
 function sudo!! --description 'sudo last command'
     eval sudo $history[1]
 end
