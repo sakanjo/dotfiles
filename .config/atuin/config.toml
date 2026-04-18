@@ -1,6 +1,27 @@
 show_help = false
+show_preview = false
 show_tabs = false
-scroll_exits = false
+enter_accept = true
+exit_mode = "return-query"
+filter_mode_shell_up_key_binding = "directory"
+history_filter = [
+    "^git status$",
+    "^git diff$",
+    "^g status$",
+    "^g diff$",
+    "^l$",
+    "^ls$",
+    "^z$",
+    "^cd$",
+    "^pwd$",
+    "^clear$",
+    "^exit$",
+    "^cls$",
+    "^z -$",
+    "^z ..$",
+    "^cd -$",
+    "^cd ..$",
+]
 
-[sync]
-records = true
+[search]
+filters = ["global", "directory"]
