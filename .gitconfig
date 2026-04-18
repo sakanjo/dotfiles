@@ -1,7 +1,14 @@
 [core]
   excludesfile = ~/.gitignore
   editor = nvim
+  pager = delta
   ignorecase = false
+[interactive]
+  diffFilter = delta --color-only
+[delta]
+  navigate = true
+[merge]
+  conflictStyle = zdiff3
 [alias]
   ps = "!git push origin $(git rev-parse --abbrev-ref HEAD)"
   pl = "!git pull origin $(git rev-parse --abbrev-ref HEAD)"
