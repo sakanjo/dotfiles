@@ -147,7 +147,7 @@ vmap <A-d> "_d
 
 nmap <C-a> gg
 nmap <leader>ff <Action>(GotoFile)
-imap <C-l> <Action>(copilot.applyInlays)
+imap <A-a> <Action>(InsertInlineCompletionAction)
 
 nmap <S-A-j> <Action>(EditorCloneCaretBelow)
 nmap <S-A-k> <Action>(EditorCloneCaretAbove)
