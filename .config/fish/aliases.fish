@@ -148,4 +148,4 @@ alias cpr 'cp -r'
 alias temp 'cd (mktemp -d)'
 alias sudo 'sudo -s'
 
-alias flush-dns 'sudo resolvectl flush-caches'
+alias flush-caches 'sudo resolvectl flush-caches'
