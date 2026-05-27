@@ -29,7 +29,7 @@ alias venv 'py -m venv ./.venv'
 alias vdea deactivate
 
 alias pi 'pip install -U'
-alias piu 'pip uninstall'
+alias piu 'pip uninstall -y'
 alias pir 'pi -r requirements.txt'
 alias pie 'pi -e .'
 
@@ -121,13 +121,13 @@ alias weather 'curl wttr.in'
 alias cls clear
 
 if command -v apt >/dev/null
-    alias i "sudo apt install -y"
-    alias r "sudo apt remove --purge -y"
-    alias u "sudo apt update"
+    alias i 'sudo apt install -y'
+    alias r 'sudo apt remove --purge -y'
+    alias u 'sudo apt update'
 else if command -v dnf >/dev/null
-    alias i "sudo dnf install -y"
-    alias r "sudo dnf remove -y"
-    alias u "sudo dnf check-update"
+    alias i 'sudo dnf install -y'
+    alias r 'sudo dnf remove -y'
+    alias u 'sudo dnf check-update'
 end
 
 alias pbcopy 'xsel --clipboard --input --trim'
@@ -147,3 +147,5 @@ alias cpr 'cp -r'
 
 alias temp 'cd (mktemp -d)'
 alias sudo 'sudo -s'
+
+alias flush-dns 'sudo resolvectl flush-caches'
