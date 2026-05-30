@@ -212,6 +212,10 @@ function mdns-ip --description 'show IPv4 address of mDNS hostname'
     avahi-resolve -n -4 $argv[1] | awk '{print $2}'
 end
 
+function ssh-ip --description 'show IP address of SSH host'
+    ssh $argv[1] -G | awk '/^hostname /{print $2}'
+end
+
 function sudo!! --description 'sudo last command'
     eval sudo $history[1]
 end
