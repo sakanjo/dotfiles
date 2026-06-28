@@ -208,6 +208,23 @@ function download-size --description 'show size of file to be downloaded'
     echo "$MB MB"
 end
 
+function which-pkg --description 'show package that provides a binary'
+    set -l bin_path (command -v $argv[1])
+    if test -z "$bin_path"
+        echo "Not found: $argv[1]"
+        return 1
+    end
+
+    if command -v dpkg >/dev/null 2>&1
+        dpkg -S $bin_path 2>/dev/null
+    else if command -v rpm >/dev/null 2>&1
+        rpm -qf $bin_path 2>/dev/null
+    else
+        echo "Unknown package manager"
+        return 1
+    end
+end
+
 function mdns-ip --description 'show IPv4 address of mDNS hostname'
     avahi-resolve -n -4 $argv[1] | awk '{print $2}'
 end
