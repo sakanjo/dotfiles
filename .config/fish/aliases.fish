@@ -114,9 +114,10 @@ alias paths 'string split : $PATH'
 alias unset 'set -e'
 
 alias mux tmuxinator
-alias myip 'curl ifconfig.me'
-alias myip4 'curl -4 ifconfig.me'
-alias weather 'curl wttr.in'
+alias myip 'curl -s ifconfig.me'
+alias myip4 'curl -s -4 ifconfig.me'
+alias myipinfo 'curl -s ipinfo.io/(myip4)'
+alias weather 'curl -s wttr.in'
 
 alias cls clear
 
