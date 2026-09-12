@@ -89,6 +89,9 @@ alias p podman
 alias p-ip 'podman inspect -f "{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}"'
 alias lazypodman 'DOCKER_HOST=unix:///var/run/user/1000/podman/podman.sock lazydocker'
 
+# K8s
+alias k kubectl
+
 # Eqo
 alias lt 'eqo listen -cq'
 
