@@ -91,6 +91,8 @@ alias lazypodman 'DOCKER_HOST=unix:///var/run/user/1000/podman/podman.sock lazyd
 
 # K8s
 alias k kubectl
+alias kx kubectx
+alias ks kubens
 
 # Eqo
 alias lt 'eqo listen -cq'
