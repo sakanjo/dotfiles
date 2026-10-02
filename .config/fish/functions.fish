@@ -233,6 +233,17 @@ function ssh-ip --description 'show IP address of SSH host'
     ssh $argv[1] -G | awk '/^hostname /{print $2}'
 end
 
+function env-source --description 'source env file'
+    set file (test -n "$argv[1]"; and echo $argv[1]; or echo .env)
+
+    for i in (command cat $file | grep -v '^#' | grep '=')
+        set arr (echo $i |tr = \n | string trim --chars=\'\")
+        set -gx $arr[1] $arr[2]
+
+        echo "Exported key: $arr[1]"
+    end
+end
+
 function sudo!! --description 'sudo last command'
     eval sudo $history[1]
 end
@@ -272,6 +283,7 @@ function fish_user_key_bindings
     bind alt-e _yazi
     bind ctrl-z zi
     bind alt-g lazygit
+    bind alt-G k9s
     bind alt-h lazydocker
     bind alt-H lazypodman
 end
