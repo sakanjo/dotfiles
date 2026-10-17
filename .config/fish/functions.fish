@@ -233,6 +233,10 @@ function ssh-ip --description 'show IP address of SSH host'
     ssh $argv[1] -G | awk '/^hostname /{print $2}'
 end
 
+function ipinfo --description 'show IP info of host'
+    curl -s https://ipinfo.io/$argv[1]
+end
+
 function env-source --description 'source env file'
     set file (test -n "$argv[1]"; and echo $argv[1]; or echo .env)
 
