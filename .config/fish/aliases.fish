@@ -134,6 +134,7 @@ else if command -v dnf >/dev/null
     alias i 'sudo dnf install -y'
     alias r 'sudo dnf remove -y'
     alias u 'sudo dnf check-update'
+    alias uu 'sudo dnf upgrade -y'
 end
 
 alias pbcopy 'xsel --clipboard --input --trim'
