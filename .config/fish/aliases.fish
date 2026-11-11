@@ -155,4 +155,6 @@ alias cpr 'cp -r'
 alias temp 'cd (mktemp -d)'
 alias sudo 'sudo -s'
 
+alias rs 'rsync -aPhz'
+
 alias flush-caches 'sudo resolvectl flush-caches'
