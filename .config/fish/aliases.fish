@@ -10,7 +10,11 @@ alias nrb 'nr build'
 alias nrs 'nr start'
 
 # Laravel
-alias a 'php artisan'
+function a
+    set -l file ./artisan
+    test -f $file; or set file "$(g root)/artisan"
+    php $file $argv
+end
 
 alias as 'a serve'
 alias akg 'a key:generate'
